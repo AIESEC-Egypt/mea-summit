@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'Images/logo.png' %}" type="image/x-icon">
+    <title>MEA Summit - Registration</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{% url 'index' %}">
+                        <img src="{% static 'Images/logo.png' %}" alt="" style="width: 50px;"> <!-- Adjust the size as needed -->
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto"> <!-- Aligning to the right -->
+                            <li class="nav-item">
+                                <a class="register-btn" href="{% url 'registration' %}">Register Now</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Egypt</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Partner With Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="registration">
+        <div class="home-content">
+            <h1 id="animated-text" class="reg">REGISTER NOW</h1>
+            <button id="showCountdownBtn">Wanna miss Round 1?</button>
+        </div>
+        <div id="countdown" style="display: none;"></div>
+    </div>
+
+    <section class="reg-sec">
+        <form class="reg-form" method="post">
+            {% csrf_token %}
+            <!-- Step 1: Personal Details -->
+            <div class="page1 page" id="step1">
+                <h2>Personal details</h2>
+                <div class="input-fields">
+                    <div class="input-field">
+                        <label for="id_first_name">First Name</label>
+                        <input type="text" name="first_name" id="id_first_name">
+                    </div>
+                    <div class="input-field">
+                        <label for="id_last_name">Last Name</label>
+                        <input type="text" name="last_name" id="id_last_name">
+                    </div>
+                    <div class="input-field">
+                        <label for="id_personal_mail">Personal Email</label>
+                        <input type="email" name="personal_mail" id="id_personal_mail">
+                    </div>
+                    <div class="input-field">
+                        <label for="id_whatsapp_number">WhatsApp Number</label>
+                        <input type="text" name="whatsapp_number" id="id_whatsapp_number">
+                    </div>
+                    <div class="input-field">
+                        <label for="id_telegram_username">Telegram Username</label>
+                        <input type="text" name="telegram_username" id="id_telegram_username">
+                    </div>
+                    <div class="input-field">
+                        <label for="id_nationality">Nationality</label>
+                        <input list="nationality" name="nationality" id="id_nationality">
+                        <datalist id="nationality">
+                            <option value="Algeria">
+                            <option value="Bahrain">
+                            <option value="Benin">
+                              <!-- Add more options as needed -->
+                        </datalist>
+                    </div>
+                    <div class="button-container">
+                        <button class="next-btn" type="button" id="nextButton">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: AIESEC Details -->
+            <div class="page2 page" id="step2" style="display: none;">
+                <h2>AIESEC details</h2>
+                <div class="input-fields">
+                    <div class="input-field">
+                        <label for="id_aiesec_mail">AIESEC Email</label>
+                        <input type="email" name="aiesec_mail" id="id_aiesec_mail">
+                    </div>
+                    <div class="input-field">
+                        <label for="id_position">Position</label>
+                        <input list="position" name="position" id="id_position">
+                        <datalist id="position">
+                            <option value="PAI">
+                            <option value="AIVP">
+                            <option value="MCP">
+                              <!-- Add more options as needed -->
+                        </datalist>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <input class="previous-btn" type="button" value="Previous" onclick="showPage(1)">
+                    <input class="submit-btn" type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="{% static 'Images/footer.png' %}" alt="">
+            <div class="text">
+                <p>2024 &copy; courtesy of AIESEC in Egypt</p>
+                <p>Developed by <span>dxp Egypt team</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include JavaScript Files -->
+    <script src="{% static 'js/countdown.js' %}"></script>
+    <script src="{% static 'js/form.js' %}"></script>
+
+    <script>
+        // Initialize the countdown
+        startCountdown();
+
+        // Show countdown and hide button when button is clicked
+        document.getElementById('showCountdownBtn').addEventListener('click', function() {
+            document.getElementById('showCountdownBtn').style.display = 'none'; // Hide the button
+            document.getElementById('countdown').style.display = 'block'; // Show the countdown
+        });
+    </script>
+</body>
+</html>

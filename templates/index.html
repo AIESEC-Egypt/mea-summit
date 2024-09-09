@@ -1,0 +1,220 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'js/bootstrap.bundle.min.js' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="fonts" href="{% static 'Fonts/Gotham-Bold.otf' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=New+Amsterdam&display=swap" rel="stylesheet">
+        <title>MEA Summit</title>
+        <link rel="icon" href="{% static 'Images/logo1.png' %}" type="image/x-icon">
+        
+    </head>
+    <header>
+        <div class="nav">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img href="index.html" src="{% static 'Images/logorpm.png' %}" alt="" style="width: 300%;"> <!-- Adjust the size as needed -->
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto"> <!-- Aligning to the right -->
+                            <li class="nav-item">
+                                <a class="register-btn" href="/registration.html">Register Now</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Egypt</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/partner.html">Partner With Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<!--
+        <div class="header">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href=""> 
+                    <img class="logo" src="{% static 'Images/logo.png' %}" alt="">
+                  </a>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Register Now</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Prtner With Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Aboute Egypt</a>
+                      </li>
+                    </form>
+                  </div>
+                </div>
+              </nav> 
+!-->
+
+<!-- home sec-->
+<body>
+
+  <div class="home">
+    <div class="home-content">
+        <h1 id="animated-text" class="text-generate">MEA SUMMIT</h1>
+        <h2 class="spaced-text">E G Y P T   2 0 2 4</h2>
+      </div>
+  </div>
+  
+<!-- end home sec-->
+<!-- about-->
+
+        <section class="aboute" data-aos="fade-up" data-aos-duration="3000">
+            <div class="aboute-content" >
+            <h3>What Is MEA Summit</h3>
+            
+            <p>Regional President Meeting is a creation of a global plenary, that would witness 400+ young professionals hailing from 100-+ countries along with business leaders, entrepreneurs to enunciate the idea of peace and fulfilment of humankind's potential.</p>
+                <br>
+                <p>This conference marks the importance of leadership and cross
+                    cultural development by getting the entire world under one roof.
+                    AIESEC in Egypt is proud to host the International Congress and is
+                    awaiting your presence in the same</p>
+                    <div class="footer">
+                      <img class="footer-img" src="{% static 'Images/footer1.png' %}" alt="" srcset="">
+                  </div>
+                    
+            </div>
+
+        </section>
+        <section class="gallery">
+          <div class="container">
+            <h3 >See Your Name in Hieroglyphic</h3>
+            <input type="text" id="singleField" name="singleField" placeholder="Enter Your name">
+            <div id="display"></div>
+              <div class="scroller">
+              <div class="scroller-inner">
+                <img src="{% static 'Images/event_1.jpg' %}" alt="">
+                <img src="{% static 'Images/event_2.jpg' %}" alt="">
+                <img src="{% static 'Images/event_3.jpg' %}" alt="">
+                <img src="{% static 'Images/event_4.jpg' %}" alt="">
+                <img src="{% static 'Images/event_5.jpg' %}" alt="">
+                <img src="{% static 'Images/event_1.jpg' %}" alt="">
+                <img src="{% static 'Images/event_2.jpg' %}" alt="">
+                <img src="{% static 'Images/event_3.jpg' %}" alt="">
+                <img src="{% static 'Images/event_4.jpg' %}" alt="">
+                <img src="{% static 'Images/event_5.jpg' %}" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <div class="container">
+
+            <img src="{% static 'Images/footer1.png' %}" alt="">
+            <div class="text">
+              <p>2024 &copy; courtesy of AIESEC in Egypt</p>
+              <p>Developed by <span>dxp Egypt team</span></p>
+            </div>
+          </div>
+        </footer>
+    </body>
+</html>
+<script>
+  const inputField = document.getElementById('singleField');
+  const displayDiv = document.getElementById('display');
+  const displayNameDiv = document.getElementById('name-display');
+  const alphabet = {
+    "a": "{% static 'images/heiroglyphics/a.png' %}",
+    "b": "{% static 'images/heiroglyphics/b.png' %}",
+    "c": "{% static 'images/heiroglyphics/c.png' %}",
+    "d": "{% static 'images/heiroglyphics/d.png' %}",
+    "e": "{% static 'images/heiroglyphics/e.png' %}",
+    "f": "{% static 'images/heiroglyphics/f.png' %}",
+    "g": "{% static 'images/heiroglyphics/g.png' %}",
+    "h": "{% static 'images/heiroglyphics/h.png' %}",
+    "i": "{% static 'images/heiroglyphics/i.png' %}",
+    "j": "{% static 'images/heiroglyphics/j.png' %}",
+    "k": "{% static 'images/heiroglyphics/k.png' %}",
+    "l": "{% static 'images/heiroglyphics/l.png' %}",
+    "m": "{% static 'images/heiroglyphics/m.png' %}",
+    "n": "{% static 'images/heiroglyphics/n.png' %}",
+    "o": "{% static 'images/heiroglyphics/o.png' %}",
+    "p": "{% static 'images/heiroglyphics/p.png' %}",
+    "q": "{% static 'images/heiroglyphics/q.png' %}",
+    "r": "{% static 'images/heiroglyphics/r.png' %}",
+    "s": "{% static 'images/heiroglyphics/s.png' %}",
+    "t": "{% static 'images/heiroglyphics/t.png' %}",
+    "u": "{% static 'images/heiroglyphics/u.png' %}",
+    "v": "{% static 'images/heiroglyphics/v.png' %}",
+    "w": "{% static 'images/heiroglyphics/w.png' %}",
+    "x": "{% static 'images/heiroglyphics/x.png' %}",
+    "y": "{% static 'images/heiroglyphics/y.png' %}",
+    "z": "{% static 'images/heiroglyphics/z.png' %}",
+    "ch": "{% static 'images/heiroglyphics/ch.png' %}",
+    "sh": "{% static 'images/heiroglyphics/sh.png' %}",
+  }
+  inputField.addEventListener('input', function(event) {
+     const inputValue = event.target.value;
+      let imageDiv = '';
+      for (let i = 0; i < inputValue.length; i++) {
+        let char = inputValue[i].toLowerCase();
+        if(i + 1 < inputValue.length && inputValue[i + 1].toLowerCase() === 'h' && (char === 'c' || char === 's')) {
+            char += 'h';
+            i++;
+        }
+        const imagePath = alphabet[char];
+        if (imagePath) {
+          imageDiv += '<img src="' + imagePath + '" class="heiroglyphics" alt="">';
+        }
+      }
+      displayDiv.innerHTML = imageDiv;
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const textElement = document.getElementById('animated-text');
+    const finalText = textElement.textContent; // The final text to display
+
+    // Function to generate random characters
+    const getRandomChar = () => String.fromCharCode(Math.floor(Math.random() * 26) + 65); // A-Z
+
+    // Function to create random letters animation
+    const animateText = () => {
+        const textLength = finalText.length;
+        const intervalTime = 50; // Time between character changes
+        const totalTime = 750; // Total time for animation in milliseconds
+        const iterations = totalTime / intervalTime;
+        let count = 0;
+
+        // Create an array of random characters
+        const randomText = Array.from({ length: textLength }, () => getRandomChar()).join('');
+        textElement.textContent = randomText;
+
+        const interval = setInterval(() => {
+            if (count < iterations) {
+                // Display random characters
+                textElement.textContent = Array.from({ length: textLength }, () => getRandomChar()).join('');
+                count++;
+            } else {
+                clearInterval(interval);
+                // Set final text
+                textElement.textContent = finalText;
+            }
+        }, intervalTime);
+    };
+
+    animateText();
+});
+
+
+</script>

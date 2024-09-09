@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'js/bootstrap.bundle.min.js' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=New+Amsterdam&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'Fonts/AislingFreeDemo.ttf' %}">
+  <title>MEA Summit</title>
+  <link rel="icon" href="{% static 'Images/logo1.png' %}" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <img href="{% url 'index' %}" src="{% static 'Images/logorpm.png' %}" alt="" style="width: 100%;"> <!-- Adjust the size as needed -->
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"> <!-- Aligning to the right -->
+              <li class="nav-item">
+                <a class="register-btn" href="{% url 'registration' %}">Register Now</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Egypt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'partner' %}">Partner With Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="registeration">
+    <div class="home-content">
+      <h1 id="animated-text" class="reg">Partner with us</h1>
+    </div>
+  </div>
+
+
+  <section class="reg-sec">
+
+    <form class="reg-form" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <!-- Step 1: Personal Details -->
+      <div class="page1 page" id="step1">
+        <h2>Company Details</h2>
+        <div class="input-fields">
+          <div class="input-field">
+            <label>Company Name</label>
+            <input type="text" name="company_name" required>
+          </div>
+          <div class="input-field">
+            <label>Company Field</label>
+            <input type="text" name="company_field" required>
+          </div>
+          <div class="input-field">
+            <label>Company Size</label>
+            <select name="company_size">
+                <option value="" selected>------</option>
+              
+                <option value="10-50 Employee">10-50 Employee</option>
+              
+                <option value="50-100 Emmployee">50-100 Emmployee</option>
+              
+                <option value="100-300 Employee">100-300 Employee</option>
+              
+                <option value="300+ Employee">300+ Employee</option>
+              
+              </select></div>
+          <div class="input-field">
+            <label>Company LinkedIn Profile</label>
+            <input type="text" name="linkedin" required>
+          </div>
+          <div class="input-field">
+            <label>Company Website</label>
+            <input type="text" name="company_website" required>
+          </div>
+          <div class="input-field">
+            <label>Why your company is interested in partnering with AIESEC MEA Summit 2024?</label>
+            <input type="text" name="why" required>
+          </div>
+          <div class="input-field">
+            <label>Contact Person Name</label>
+            <input type="text" name="contact_name" required>
+          </div>
+          <div class="input-field">
+            <label>Contact Person Email</label>
+            <input type="email" name="contact_mail" required>
+          </div>
+          <div class="input-field">
+            <label>Contact Person Mobile Number</label>
+            <input type="text" name="contact_number" required>
+          </div>
+          <div class="input-field">
+            <label>Contact Person Position in the organization</label>
+            <input type="text" name="contact_position" required>
+          </div>
+         
+        <div class="button-container">
+          <input class="submit-btn" type="submit" value="Submit" onclick="validateStep2()">
+        </div>
+      </div>
+    </form>
+    
+  </section>
+
+  <footer>
+    <div class="container">
+      <img class="footer image" src="{% static 'Images/footer1.png' %}" alt="">
+      <div class="text">
+        <p>2024 &copy; courtesy of AIESEC in Egypt</p>
+        <p>Developed by <span>dxp Egypt team</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Include JavaScript Files -->
+
+
+
+  
+</body>
+
+</html>

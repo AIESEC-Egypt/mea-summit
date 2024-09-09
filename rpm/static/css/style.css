@@ -1,0 +1,828 @@
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #B5163C;
+  /* Orange */
+  border-radius: 10px;
+  border: 3px solid white;
+  /* Adds a white border around the thumb */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #B5163C white;
+}
+
+/* Navbar Styles */
+/* Navbar Styles */
+.navbar {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  /* Semi-transparent background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  /* Ensure the navbar stays on top of other content */
+}
+
+.register-btn {
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #B5163C;
+  /* Orange text color */
+  border: 2px solid transparent;
+  /* Orange border */
+  border-radius: 20px;
+  /* Rounded corners */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Smooth transition */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+}
+
+.register-btn:hover {
+  background-color: #B5163C;
+  /* Orange background on hover */
+  color: white;
+  /* White text on hover */
+}
+
+
+.navbar-nav {
+  margin-left: auto;
+  /* Push navigation links to the right */
+  margin-right: 2rem;
+  /* Adjust as needed to reduce space */
+}
+
+.nav-item {
+  margin-left: 1rem;
+  /* Reduce space between nav items */
+}
+
+
+.navbar-brand {
+  margin-right: auto;
+  /* Push the brand/logo to the left */
+}
+
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: #fff;
+  /* Change link color to white */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #B5163C;
+  /* Change link color on hover */
+}
+
+.navbar-brand img {
+  max-width: 150px;
+  /* Adjust the size of the logo */
+}
+
+/* Color Changing Text Animation */
+/* Pulsing Text Animation */
+/* Basic Styling for the Text */
+/* Basic Styling for the Text */
+/* Basic Styling for the Text */
+.text-generate {
+  font-size: 130px;
+  /* Adjust as needed */
+  font-family: 'New Amsterdam', sans-serif;
+  /* Desired final font */
+  font-weight: lighter;
+  /* Adjust as needed */
+  color: #fff;
+  /* Adjust color if needed */
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  /* Ensure content fits within bounds */
+  opacity: 1;
+  /* Ensure text is visible */
+  transition: opacity 1s ease-in-out;
+  /* Smooth transition for opacity */
+  text-align: center;
+}
+
+#showCountdownBtn {
+  font-size: 40px;
+  /* Adjust as needed */
+  padding: 10px 20px;
+  /* Adjust as needed */
+  background-color: #ffffff;
+  /* Button background color */
+  color: #B5163C;
+  /* Button text color */
+  border: none;
+  border-radius: 20px;
+  /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color */
+  margin-bottom: 20px;
+  /* Space between button and countdown */
+}
+
+#showCountdownBtn:hover {
+  background-color: #B5163C;
+  /* Darker background on hover */
+  color: #Fff;
+}
+
+
+
+.headline-container {
+  text-align: center;
+  margin-top: 50px;
+  /* Adjust as needed */
+}
+
+#countdown {
+  font-size: 70px;
+  /* Adjust as needed */
+  font-family: 'New Amsterdam', sans-serif;
+  /* Desired final font */
+  font-weight: lighter;
+  /* Adjust as needed */
+  color: #fff;
+  /* Adjust color if needed */
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /* Ensure content fits within bounds */
+  width: auto;
+  white-space: nowrap;
+
+
+}
+
+.error {
+  background-color: #ffcccc; /* Light red background */
+}
+
+.home {
+
+  font-family: 'New Amsterdam', sans-serif;
+  background-color: #B5163C;
+  background-image: url('../Images/pyramids1.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: auto;
+}
+
+.home {
+  text-align: center;
+}
+
+.registeration {
+  background-color: #B5163C;
+  background-image: url('../Images/reg/backg.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: auto;
+  text-align: center;
+
+  /* Add this to create the fading effect */
+  position: relative;
+}
+
+.registeration::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Adjust the height as needed */
+  background: transparent;
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 100%));
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 100%), rgba(0,0,0,100%));
+}
+
+.registeration {
+
+  text-align: center;
+
+}
+
+/* General styling for the background and form container */
+
+.count {
+  font-family: New Amsterdam;
+  font-weight: bold;
+  width: auto;
+  text-align: center;
+  color: #fff;
+  ;
+  font-size: 40px;
+  text-align: center;
+  animation: fadeInUp 3s ease-out forwards;
+  opacity: 0;
+  /* Start with opacity 0 for animation */
+  position: relative;
+  z-index: 1;
+}
+
+
+.container {
+  width: 100%;
+}
+
+
+
+h1 {
+  text-align: center;
+  font-size: 130px;
+  text-shadow: 2px 2px 5px #B5163C;
+}
+
+h2 {
+  font-family: New Amsterdam;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.spaced-text {
+  letter-spacing: 10px;
+  /* Adjust the spacing between letters/numbers */
+  font-family: 'New Amsterdam', sans-serif;
+  /* Use your desired font */
+  font-weight: lighter;
+  text-align: center;
+  font-size: 25px;
+  /* Adjust the font size as needed */
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.home-content {
+  font-family: New Amsterdam;
+  font-weight: bold;
+  width: 50%;
+  text-align: center;
+  color: #fff;
+  ;
+  margin: 200px auto 0px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.aboute {
+  background-color: #B5163C;
+  background-image: url('../Images/bkgd.png');
+  background-size: cover;
+  background-position: center;
+  /* height: 100vh; */
+  overflow: auto;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 650px) {
+  .aboute {
+    margin-bottom: 0;
+  }
+
+  .aboute .container {
+    padding-bottom: 0;
+  }
+}
+
+h3 {
+  font-family: New Amsterdam;
+  font-weight: bolder;
+  font-weight: lighter;
+  font-size: 70px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin: auto;
+  gap: 51px;
+  margin-top: 40px;
+  width: 85%;
+}
+
+.paragraphs span {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .paragraphs {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.aboute-content {
+  animation: fadeInUp 2s ease-out forwards;
+  opacity: 0;
+  /* Start with opacity 0 for animation */
+  font-family: 'Times New Roman', Times, serif;
+  width: 80%;
+  text-align: center;
+  font-size: 60px;
+  color: beige;
+  margin: 200px auto 0px;
+  font-size: 18px;
+}
+
+.aboute-content p {
+  font-size: 30px;
+}
+
+@media (min-width: 768px) {
+  .aboute-content {
+    width: 750px;
+  }
+}
+
+/* medium */
+
+@media (min-width: 992px) {
+  .aboute-content {
+    width: 970px;
+  }
+}
+
+/* large */
+
+@media (min-width: 1200px) {
+  .aboute-content {
+    width: 1170px;
+  }
+}
+
+
+.footer-img {
+  width: 600px;
+  max-width: 100%;
+  margin-bottom: 35px;
+  border-radius: 30px;
+}
+
+/* Mahmoud */
+
+:root {
+  --main-color: #B5163C;
+  --gold: #FFD700;
+   --highlight-color: #f0f0f0;
+  --text-color: #333;
+}
+
+.container {
+  margin-inline: auto;
+}
+
+/* CSS to control size of hieroglyphics icons */
+.hieroglyph {
+  width: 30px;
+  /* Adjust width as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.footer-pattern {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+/* Gallery */
+.gallery {
+  background-image: url("../Images/footer\ logo.png");
+  background-color: var(--main-color);
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+  align-items: center;
+  position: relative;
+}
+
+.gallery .container {
+  padding-block: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.gallery h3 {
+  text-align: center;
+  color: white;
+  font-size: 80px;
+}
+
+.gallery input {
+  height: 60px;
+  width: 50%;
+  min-width: 320px;
+  padding-inline: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+}
+
+.gallery input::placeholder {
+  color: var(--main-color);
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.gallery input:focus {
+  color: var(--main-color);
+}
+
+.scroller {
+  max-width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+
+.scroller-inner {
+  height: 440px;
+  width: fit-content;
+  display: flex;
+  column-gap: 40px;
+  animation: scroll 20s infinite linear;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 20px));
+  }
+}
+
+.scroller-inner img {
+  height: 90%;
+}
+
+.scroller-inner img:nth-child(odd) {
+  align-self: flex-end;
+}
+
+/* Footer */
+footer {
+  background-color: var(--main-color);
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+footer img {
+  display: block;
+  width: 100%;
+}
+
+footer image {
+  display: block;
+  width: 100%;
+}
+
+footer p {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 100;
+  margin: 0;
+}
+
+footer p span {
+  font-weight: 700;
+}
+
+.reg-sec {
+  background-image: url("../Images/reg/pattern3.png");
+  background-color: var(--main-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-block: 0px;
+}
+
+.reg-form .page {
+  font-family: 'New Amsterdam';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.reg-form .page h2 {
+  font-size: 64px;
+  font-weight: lighter;
+  color: white;
+}
+
+.input-fields {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: minmax(400px, 600px);
+  gap: 24px;
+}
+
+.input-field label {
+  display: block;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.input-field input {
+  width: 100%;
+  height: 56px;
+  color: var(--main-color);
+  padding-inline: 24px;
+  border: none;
+  border-radius: 24px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-field1 label {
+  display: block;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.input-field1 input {
+  width: 100%;
+  height: 56px;
+  color: white;
+  padding-inline: 24px;
+  border: none;
+  border-radius: 24px;
+  font-size: 18px;
+}
+
+.input-field input:focus {
+  outline: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  /* Adjust the space between buttons as needed */
+}
+.custom-select {
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.custom-select select {
+  display: none; /* Hide original select */
+}
+
+.select-selected {
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 24px;
+  padding: 10px;
+  font-size: 18px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.select-selected:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #ccc transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #ccc transparent;
+  top: 7px;
+}
+
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 2px solid #ccc;
+  border-radius: 24px;
+  z-index: 99;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+}
+
+.select-items div {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: var(--main-color);
+  color: white;
+}
+
+
+.next-btn,
+.previous-btn,
+.submit-btn {
+  height: 56px;
+  color: var(--main-color);
+  padding-inline: 24px;
+  border: none;
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 30px
+}
+
+.next-btn:hover,
+.previous-btn:hover,
+.submit-btn:hover {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding-inline: 20px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 740px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply Animations to the First Block */
+.home {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-content {
+  animation: fadeInUp 2s ease-out forwards;
+  opacity: 0;
+  /* Start with opacity 0 for animation */
+}
+
+.home-image {
+  animation: zoomIn 2s ease-out forwards;
+  opacity: 0;
+  /* Start with opacity 0 for animation */
+}
+
+/* Ensure Content Overlaps Image */
+.home-content,
+.home-image {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-primary {
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #B5163C;
+  /* Orange text color */
+  border: 2px solid transparent;
+  /* Orange border */
+  border-radius: 20px;
+  /* Rounded corners */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.btn-primary:hover {
+  background-color: #B5163C;
+  /* Orange background on hover */
+  color: white;
+  /* White text on hover */
+}
