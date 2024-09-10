@@ -89,13 +89,37 @@
           </div>
           <div class="input-field">
             <label>Position</label>
-            <input list="position" name="position" required>
-            <datalist id="position">
-              <option value="PAI">
-              <option value="AIVP">
-              <option value="MCP">
+            <select name="position" required>
+              <option value="" selected>------</option>
+              <option value="MCP">MCP</option>
+              <option value="MCVP EwA">MCVP EwA</option>
+              <option value="MCVP FnL">MCVP FnL</option>
+              <option value="MCVP FM">MCVP FM</option>
+              <option value="MCVP BD">MCVP BD</option>
+              <option value="MCVP B2B">MCVP B2B</option>
+              <option value="MCVP IM">MCVP IM</option>
+              <option value="MCVP PR">MCVP PR</option>
+              <option value="MCVP MKTG">MCVP MKTG</option>
+              <option value="MCVP OPS">MCVP OPS</option>
+              <option value="MCVP oGX">MCVP oGX</option>
+              <option value="MCVP oGV">MCVP oGV</option>
+              <option value="MCVP oGT">MCVP oGT</option>
+              <option value="MCVP iCX">MCVP iCX</option>
+              <option value="MCVP iGV">MCVP iGV</option>
+              <option value="MCVP iGT">MCVP iGT</option>
+              <option value="MCVP OD">MCVP OD</option>
+              <option value="MCVP ODM">MCVP ODM</option>
+              <option value="MCVP Expansions">MCVP Expansions</option>
+              <option value="MCVP MXP">MCVP MXP</option>
+              <option value="LCP">LCP</option>
+              <option value="LCPe">LCPe</option>
+              <option value="CEEDer">CEEDer</option>
+              <option value="GS">GS</option>
+
+
+
               <!-- Add more options as needed -->
-            </datalist>
+              </select>
           </div>
           <div class="input-field">
             <label>AIESEC Email</label>
@@ -107,13 +131,8 @@
           </div>
           <div class="input-field">
             <label>Nationality</label>
-            <input list="nationality" name="nationality" required>
-            <datalist id="nationality">
-              <option value="Algeria">
-              <option value="Bahrain">
-              <option value="Benin">
-              <!-- Add more options as needed -->
-            </datalist>
+            <input type="text" name="nationality" required>
+
           </div>
           <div class="input-field1">
             <label for="image">Upload your image</label>
@@ -127,7 +146,7 @@
     
       <!-- Step 2: AIESEC Details -->
       <div class="page2 page" id="step2" style="display: none;">
-        <h2>AIESEC details</h2>
+        <h2>Delegate Experience Details</h2>
         <div class="input-fields">
           <div class="input-field">
             <label>What is your main motivation to be part of MEAS'24 Egypt?</label>
@@ -147,16 +166,15 @@
           </div>
           <div class="input-field">
             <label>Do you have any kind of allergies or food preferences?</label>
-            <input list="allergies" name="allergies" required>
-            <datalist id="allergies">
-              <option value="I don't have any allergies or food preferences">
-              <option value="Vegetarian">
-              <option value="Vegan">
-              <option value="Lactose-free">
-              <option value="Gluten-free">
-              <option value="Other">
+            <select name="allergies">
+              <option value="" selected>------</option>
+              <option value="I don't have any allergies or food preferences">I don't have any allergies or food preferences</option>
+              <option value="Vegetarian">Vegetarian</option>
+              <option value="Vegan">Vegan</option>
+              <option value="Lactose-free">Lactose-free</option>
+              <option value="Gluten-free">Gluten-free</option>
               <!-- Add more options as needed -->
-            </datalist>
+              </select>
           </div>
         </div>
         <div class="button-container">
