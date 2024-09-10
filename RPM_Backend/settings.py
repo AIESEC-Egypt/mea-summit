@@ -12,8 +12,6 @@ print(f"BASE_DIR: {BASE_DIR}")
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('MY_SECRET_KEY','django-insecure-3j96hah3@7@8b=o%q8gvmt-%_yx-wo^+m%3-pq1k9o66e%5_p+')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
@@ -128,6 +126,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 STATICFILES_DIRS = [BASE_DIR / 'rpm' / "static"]
 
