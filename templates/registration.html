@@ -132,12 +132,16 @@
           <div class="input-field">
             <label>Nationality</label>
             <input type="text" name="nationality" required>
-
           </div>
-          <div class="input-field1">
+       <!--   <div class="input-field1">
             <label for="image">Upload your image</label>
             <input type="file" name="image" id="image" accept="image/*" required>
+          </div>-->
+          <div>
+            <label for="formFileLg" class="input-field1">Upload your image</label>
+            <input class="form-control form-control-lg" id="image" name"image" type="file">
           </div>
+
           <div class="button-container">
             <button class="next-btn" type="button" id="nextButton" onclick="validateStep1()">Next</button>
           </div>

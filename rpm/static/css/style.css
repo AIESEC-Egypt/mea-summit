@@ -649,7 +649,7 @@ footer p span {
 }
 
 
-.input-field1 label {
+.input-field1{
   display: block;
   color: white;
   font-size: 24px;
@@ -666,6 +666,12 @@ footer p span {
   font-size: 18px;
 }
 
+.form-control-lg{
+  border-radius: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  color: #B5163C !important;
+}
 
 .input-field input:focus {
   outline: none;
@@ -872,4 +878,44 @@ footer p span {
   /* Orange background on hover */
   color: white;
   /* White text on hover */
+}
+h5{
+  font-family: New Amsterdam;
+    font-weight:bolder;
+    font-weight: lighter;
+    font-size : 60px;
+    text-align: center !important;
+    padding: 20x;
+    margin: 20px;
+    color: #fff; ;
+}
+
+.slider{
+background-color: var(--main-color);
+
+}
+.carousel-item{
+  background-color: #B5163C !important;
+}
+.slider p{
+  color: #fff;
+}
+.carousel-control-prev-icon,.carousel-control-next-icon{
+  filter: none !important;
+  color: #E7E6E6 !important;
+}
+.carousel-dark .carousel-indicators [data-bs-target]{
+background-color: #E7E6E6 !important;
+}
+
+
+@media (max-width: 768px) {
+  .carousel-item h5 {
+    font-size: 24px;
+  }
+  .carousel-item p {
+    line-height: 1.5;
+    padding: 10px;
+
+  }
 }
