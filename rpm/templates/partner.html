@@ -37,7 +37,7 @@
                 <a class="nav-link" href="#">About Egypt</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'partner' %}">Partner With Us</a>
+                <a class="nav-link" href="{% url 'partners' %}">Partner With Us</a>
               </li>
             </ul>
           </div>
@@ -105,7 +105,7 @@
           </div>
           <div class="input-field">
             <label>Contact Person Mobile Number</label>
-            <input type="text" name="contact_number" required>
+            <input type="text" name="contact_phone" required>
           </div>
           <div class="input-field">
             <label>Contact Person Position in the organization</label>
@@ -113,7 +113,6 @@
           </div>
          
         <div class="button-container">
-          <input class="previous-btn" type="button" value="Previous" onclick="showPage(1)">
           <input class="submit-btn" type="submit" value="Submit" onclick="validateStep2()">
         </div>
       </div>
@@ -132,97 +131,9 @@
   </footer>
 
   <!-- Include JavaScript Files -->
-  <script src="{% static 'js/countdown.js' %}"></script>
-  <script src="{% static 'js/form.js' %}"></script>
 
-  <script>
-      // Initialize the countdown
-      startCountdown();
 
-      // Show countdown and hide button when button is clicked
-      document.getElementById('showCountdownBtn').addEventListener('click', function() {
-          document.getElementById('showCountdownBtn').style.display = 'none'; // Hide the button
-          document.getElementById('countdown').style.display = 'block'; // Show the countdown
-      });
-  </script>
 
-  <script>
-    // Function to show the next page
-  function showPage(step) {
-    // Hide all pages
-    document.querySelectorAll('.page').forEach(page => {
-      page.style.display = 'none';
-    });
-    // Show the page for the current step
-    document.getElementById('step' + step).style.display = 'block';
-  }
-
-  // Validate Step 1 (Personal Details) before moving to Step 2
-    // Function to show the next or previous page
-    function showPage(step) {
-      // Hide all pages
-      document.querySelectorAll('.page').forEach(page => {
-        page.style.display = 'none';
-      });
-      // Show the page for the current step
-      document.getElementById('step' + step).style.display = 'block';
-    }
-  
-    // Validate Step 1 (Personal Details) before moving to Step 2
-    function validateStep1() {
-      const step1Inputs = document.querySelectorAll('#step1 input');
-      let isValid = true;
-  
-      // Check if all fields in Step 1 are filled
-      step1Inputs.forEach(input => {
-        if (!input.value.trim()) {
-          isValid = false;
-          input.classList.add('error'); // Highlight empty fields with error class
-        } else {
-          input.classList.remove('error'); // Remove error class from filled fields
-        }
-      });
-  
-      return isValid;
-    }
-  
-    // Validate Step 2 (AIESEC Details) before submitting the form
-    function validateStep2(event) {
-      const step2Inputs = document.querySelectorAll('#step2 input');
-      let isValid = true;
-  
-      // Check if all fields in Step 2 are filled
-      step2Inputs.forEach(input => {
-        if (!input.value.trim()) {
-          isValid = false;
-          input.classList.add('error'); // Highlight empty fields with error class
-        } else {
-          input.classList.remove('error'); // Remove error class from filled fields
-        }
-      });
-  
-      if (!isValid) {
-        event.preventDefault();  // Prevent form submission if validation fails
-      }
-    }
-  
-    // Attach event listeners on buttons
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initially show Step 1
-      showPage(1);
-  
-      // Validate Step 1 before moving to Step 2
-      document.getElementById('nextButton').addEventListener('click', function() {
-        if (validateStep1()) {
-          showPage(2);  // Move to Step 2 only if Step 1 is valid
-        }
-      });
-  
-      // Validate Step 2 on form submission
-      document.querySelector('.reg-form').addEventListener('submit', validateStep2);
-    });
-  
-  </script>
   
 </body>
 

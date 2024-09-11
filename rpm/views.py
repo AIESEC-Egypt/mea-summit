@@ -4,12 +4,10 @@ from .forms import RegistrationForm
 def index(request):
     return render(request, 'index.html')
 
-def partner(request):
-    return render(request, 'partner.html')
 
 def registration(request):
     if request.method == 'POST':
-        form = RegistrationForm(request.POST,request.FILES)
+        form = RegistrationForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
     else:
