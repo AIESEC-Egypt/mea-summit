@@ -24,10 +24,9 @@ ALLOWED_HOSTS = os.getenv ("DJANGO_ALLOWED_HOSTS","127.0.0.1,localhost").split("
 # Application definition
 
 
-if os.getenv("DATABASE_URL","") != "":
 DATABASES = {
   'default': {
-      'ENGINE': 'django.db.backends.postgresql',
+      'ENGINE': 'django.db.backends.postgresql_psycopg2',
       'NAME': 'mea',
       'USER': 'doadmin',
       'PASSWORD': 'AVNS_tX4w6erHeU_O1e_pOE-',
@@ -38,13 +37,7 @@ DATABASES = {
     },
   }
 }
-else:
-    DATABASES = {
-  'default': {
-      'ENGINE': 'django.db.backends.sqlite3',
-      'NAME': BASE_DIR / 'db.sqlite3',
-  }
-}
+
 
 
 INSTALLED_APPS = [
