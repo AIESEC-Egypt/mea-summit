@@ -28,11 +28,11 @@ if os.getenv("DATABASE_URL","") != "":
 DATABASES = {
   'default': {
       'ENGINE': 'django.db.backends.postgresql',
-      'NAME': 'defaultdb',
+      'NAME': 'mea',
       'USER': 'doadmin',
       'PASSWORD': 'AVNS_tX4w6erHeU_O1e_pOE-',
       'HOST': 'app-807a9868-54c1-4871-bfbd-504a8a4bba0a-do-user-244201-0.h.db.ondigitalocean.com',
-      'PORT': '25060',
+      'PORT': '25061',
       'OPTIONS': {
         'sslmode': 'require',
     },
