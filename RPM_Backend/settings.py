@@ -15,15 +15,16 @@ print(f"BASE_DIR: {BASE_DIR}")
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('MY_SECRET_KEY','django-insecure-3j96hah3@7@8b=o%q8gvmt-%_yx-wo^+m%3-pq1k9o66e%5_p+')
+SECRET_KEY = os.getenv('MY_SECRET_KEY', get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-DEVELOPMENT_MODE = False
+DEBUG = os.getenv ("DEBUG","False") == "True"
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.getenv ("DJANGO_ALLOWED_HOSTS","127.0.0.1,localhost").split(",")
 # Application definition
 
+
+if os.getenv("DATABASE_URL","") != "":
 DATABASES = {
   'default': {
       'ENGINE': 'django.db.backends.postgresql',
@@ -37,6 +38,14 @@ DATABASES = {
     },
   }
 }
+else:
+    DATABASES = {
+  'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': BASE_DIR / 'db.sqlite3',
+  }
+}
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
