@@ -123,7 +123,7 @@
 /* Basic Styling for the Text */
 /* Basic Styling for the Text */
 .text-generate {
-  font-size: 130px;
+  font-size: 132px;
   /* Adjust as needed */
   font-family: 'New Amsterdam', sans-serif;
   /* Desired final font */
@@ -133,8 +133,6 @@
   /* Adjust color if needed */
   position: relative;
   display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
   /* Ensure content fits within bounds */
   opacity: 1;
   /* Ensure text is visible */
@@ -177,22 +175,11 @@
 }
 
 #countdown {
+  text-align: center;
   font-size: 70px;
-  /* Adjust as needed */
-  font-family: 'New Amsterdam', sans-serif;
-  /* Desired final font */
+  font-family: "New Amsterdam", sans-serif;
   font-weight: lighter;
-  /* Adjust as needed */
   color: #fff;
-  /* Adjust color if needed */
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  /* Ensure content fits within bounds */
-  width: auto;
-  white-space: nowrap;
-
-
 }
 
 .error {
@@ -201,30 +188,27 @@
 
 .home {
 
-  font-family: 'New Amsterdam', sans-serif;
-  background-color: #B5163C;
-  background-image: url('../Images/pyramids1.png');
+  font-family: "New Amsterdam", sans-serif;
+  background-color: #b5163c;
+  background-image: url("../Images/pyramids1.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
-  overflow: auto;
-}
-
-.home {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .registeration {
-  background-color: #B5163C;
-  background-image: url('../Images/reg/backg.png');
+  background-color: #b5163c;
+  background-image: url(../Images/reg/backg.png);
   background-size: cover;
   background-position: center;
   height: 100vh;
-  overflow: auto;
-  text-align: center;
-
-  /* Add this to create the fading effect */
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .registeration::after {
@@ -245,17 +229,17 @@
 
 }
 
+
 .partner {
-  background-color: #B5163C;
-  background-image: url('../Images/partner/bkgd.png');
+  background-color: #b5163c;
+  background-image: url("../Images/partner/bkgd.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
-  overflow: auto;
-  text-align: center;
-
-  /* Add this to create the fading effect */
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .partner::after {
@@ -266,9 +250,14 @@
   width: 100%;
   height: 50%; /* Adjust the height as needed */
   background: transparent;
-  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 100%));
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 100%), rgba(0,0,0,100%));
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 100%),
+    rgba(0, 0, 0, 100%)
+  );
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 100%));
 }
+
 
 .partner {
 
@@ -339,11 +328,7 @@ h2 {
 .home-content {
   font-family: New Amsterdam;
   font-weight: bold;
-  width: 50%;
-  text-align: center;
   color: #fff;
-  ;
-  margin: 200px auto 0px;
   font-size: 40px;
   text-align: center;
 }
@@ -598,11 +583,12 @@ footer p span {
 }
 
 .reg-form .page {
-  font-family: 'New Amsterdam';
+  font-family: "New Amsterdam";
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  padding: 20px;
 }
 
 .reg-form .page h2 {
@@ -879,6 +865,32 @@ footer p span {
   color: white;
   /* White text on hover */
 }
+
+@media (max-width: 992px) {
+  .container-fluid {
+    position: relative;
+  }
+  .navbar-collapse {
+    position: absolute;
+    right: 12px;
+    top: 80px;
+    /* background-color: #b5163c; */
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .navbar-nav,
+  .nav-item {
+    text-align: center;
+    margin: 0;
+  }
+  .gallery .container #display img {
+    width: 30px;
+  }
+  #countdown {
+    font-size: 40px;
+  }
+}
+
 h5{
   font-family: New Amsterdam;
     font-weight:bolder;
