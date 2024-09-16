@@ -26,29 +26,11 @@ ALLOWED_HOSTS = os.getenv ("DJANGO_ALLOWED_HOSTS","127.0.0.1,localhost").split("
 
 import os
 
-if os.getenv('USE_DIGITALOCEAN_DB', 'False') == 'True':
-    # Use the DigitalOcean database configuration
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'mea',
-            'USER': 'doadmin',
-            'PASSWORD': 'AVNS_tX4w6erHeU_O1e_pOE-',
-            'HOST': 'app-807a9868-54c1-4871-bfbd-504a8a4bba0a-do-user-244201-0.h.db.ondigitalocean.com',
-            'PORT': '25061',
-            'OPTIONS': {
-                'sslmode': 'require',
-            },
-        }
-    }
-else:
-    # Use the local SQLite database configuration
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')
+    )
+}
 
 
 
@@ -63,7 +45,7 @@ INSTALLED_APPS = [
     "rpm.apps.RpmConfig",
     "graphene_django",
     "partners.apps.PartnersConfig"
-]
+] 
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware', # new line added
