@@ -35,6 +35,7 @@ class UserRegistration(models.Model):
     expectations = models.CharField(max_length=250, null=True, blank=True)
     allergies = models.CharField(max_length=50, choices=allergies_choices, null=True, blank=True)
     image = models.ImageField(upload_to='uploads/', null=True, blank=True)
+    entity = models.CharField(max_length=50, blank=True, null=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} - {self.position}"

@@ -25,6 +25,8 @@ class UserRegistrationInput(graphene.InputObjectType):
     expectations = graphene.String(required=True)
     allergies = graphene.String(required=True)
     image = Upload(required=True)  # Use Upload for image file uploads
+    entity = graphene.String(required=True)
+
 
 class RegistrationMutation(graphene.Mutation):
     class Arguments:
@@ -48,6 +50,7 @@ class RegistrationMutation(graphene.Mutation):
             AiesecEmail=input.AiesecEmail,
             Position=input.Position,
             dob=input.dob,
+            entity =input.entity,
             motivation=input.motivation,
             unique_events=input.unique_events,
             experiences=input.experiences,

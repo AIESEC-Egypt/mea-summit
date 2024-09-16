@@ -8,5 +8,5 @@ class RegistrationForm(forms.ModelForm):
             'first_name', 'last_name', 'personal_mail', 
             'whatsapp_number', 'telegram_username', 'country',
             'position', 'aiesec_mail', 'nationality', 'dob', 'image', 'motivation', 'unique_events',
-            'experiences', 'expectations', 'allergies'
+            'experiences', 'expectations', 'allergies','entity'
         ]

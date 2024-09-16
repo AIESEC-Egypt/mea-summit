@@ -24,19 +24,32 @@ ALLOWED_HOSTS = os.getenv ("DJANGO_ALLOWED_HOSTS","127.0.0.1,localhost").split("
 # Application definition
 
 
-DATABASES = {
-  'default': {
-      'ENGINE': 'django.db.backends.postgresql_psycopg2',
-      'NAME': 'mea',
-      'USER': 'doadmin',
-      'PASSWORD': 'AVNS_tX4w6erHeU_O1e_pOE-',
-      'HOST': 'app-807a9868-54c1-4871-bfbd-504a8a4bba0a-do-user-244201-0.h.db.ondigitalocean.com',
-      'PORT': '25061',
-      'OPTIONS': {
-        'sslmode': 'require',
-    },
-  }
-}
+import os
+
+if os.getenv('USE_DIGITALOCEAN_DB', 'False') == 'True':
+    # Use the DigitalOcean database configuration
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'mea',
+            'USER': 'doadmin',
+            'PASSWORD': 'AVNS_tX4w6erHeU_O1e_pOE-',
+            'HOST': 'app-807a9868-54c1-4871-bfbd-504a8a4bba0a-do-user-244201-0.h.db.ondigitalocean.com',
+            'PORT': '25061',
+            'OPTIONS': {
+                'sslmode': 'require',
+            },
+        }
+    }
+else:
+    # Use the local SQLite database configuration
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
 
 
 
