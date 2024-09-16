@@ -76,22 +76,22 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-GRAPHENE = {
+#GRAPHENE = {
 # Add the line below
-    'MIDDLEWARE': [
-    'graphql_jwt.middleware.JSONWebTokenMiddleware',
-],
-}
+ #   'MIDDLEWARE': [
+  #  'graphql_jwt.middleware.JSONWebTokenMiddleware',
+#],
+#}
 
-GRAPHQL_JWT = {
-'JWT_VERIFY_EXPIRATION': False,
- 'JWT_EXPIRATION_DELTA': timedelta(minutes=1),
-}
+#GRAPHQL_JWT = {
+#'JWT_VERIFY_EXPIRATION': False,
+ #'JWT_EXPIRATION_DELTA': timedelta(minutes=1),
+#}
 
-AUTHENTICATION_BACKENDS = [
- 'graphql_jwt.backends.JSONWebTokenBackend',
-'django.contrib.auth.backends.ModelBackend',
-]
+#AUTHENTICATION_BACKENDS = [
+ #'graphql_jwt.backends.JSONWebTokenBackend',
+#'django.contrib.auth.backends.ModelBackend',
+#]
 
 
 ROOT_URLCONF = 'RPM_Backend.urls'
