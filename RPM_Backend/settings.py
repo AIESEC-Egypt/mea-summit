@@ -19,7 +19,7 @@ SECRET_KEY = "django-insecure-3j96hah3@7@8b=o%q8gvmt-%_yx-wo^+m%3-pq1k9o66e%5_p+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-DEVELOPMENT_MODE= False
+DEVELOPMENT_MODE= True
 
 ALLOWED_HOSTS = ["*"]
 # Application definition
@@ -72,8 +72,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'graphql_jwt.middleware.JSONWebTokenMiddleware',
-
 ]
 
 GRAPHENE = {
