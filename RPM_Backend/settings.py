@@ -15,22 +15,37 @@ print(f"BASE_DIR: {BASE_DIR}")
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('MY_SECRET_KEY', get_random_secret_key())
+SECRET_KEY = "django-insecure-3j96hah3@7@8b=o%q8gvmt-%_yx-wo^+m%3-pq1k9o66e%5_p+"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv ("DEBUG","False") == "True"
+DEBUG = False
+DEVELOPMENT_MODE= False
 
-ALLOWED_HOSTS = os.getenv ("DJANGO_ALLOWED_HOSTS","127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = ["*"]
 # Application definition
 
 
 import os
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')
-    )
-}
+if DEVELOPMENT_MODE is True:
+     DATABASES = {
+     "default": {
+         "ENGINE": "django.db.backends.sqlite3",
+         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+     }
+ }
+else: 
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'mea',
+            'USER': 'doadmin',
+            'PASSWORD': 'AVNS_tX4w6erHeU_O1e_pOE-',
+            'HOST': 'app-807a9868-54c1-4871-bfbd-504a8a4bba0a-do-user-244201-0.h.db.ondigitalocean.com',
+            'PORT': '25061',
+            'OPTIONS': {'sslmode': 'require'},
+        }
+    }
 
 
 
