@@ -122,8 +122,12 @@
 /* Basic Styling for the Text */
 /* Basic Styling for the Text */
 /* Basic Styling for the Text */
+@font-face {
+  font-family: "gotham";
+  src: url("../Fonts/Gotham-Light.otf");
+}
 .text-generate {
-  font-size: 132px;
+  font-size: 170px;
   /* Adjust as needed */
   font-family: 'New Amsterdam', sans-serif;
   /* Desired final font */
@@ -358,10 +362,9 @@ h3 {
   font-family: New Amsterdam;
   font-weight: bolder;
   font-weight: lighter;
-  font-size: 70px;
+  font-size: 80px;
   text-align: center;
-  padding: 20px;
-  margin: 20px;
+
 }
 
 .paragraphs {
@@ -389,7 +392,7 @@ h3 {
   animation: fadeInUp 2s ease-out forwards;
   opacity: 0;
   /* Start with opacity 0 for animation */
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'gotham',  serif;
   width: 80%;
   text-align: center;
   font-size: 60px;
@@ -399,7 +402,7 @@ h3 {
 }
 
 .aboute-content p {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 @media (min-width: 768px) {
@@ -447,7 +450,7 @@ h3 {
 
 /* CSS to control size of hieroglyphics icons */
 .hieroglyph {
-  width: 30px;
+  width: 90px;
   /* Adjust width as needed */
   height: auto;
   /* Maintain aspect ratio */
@@ -890,14 +893,24 @@ footer p span {
     font-size: 40px;
   }
 }
-
+h4{
+  font-family: New Amsterdam;
+    font-weight:bolder;
+    font-weight: lighter;
+    font-size : 75px;
+    text-align: center !important;
+    padding: 20x;
+    margin: 20px;
+    color: #fff; 
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
 h5{
   font-family: New Amsterdam;
     font-weight:bolder;
     font-weight: lighter;
-    font-size : 60px;
+    font-size : 75px;
     text-align: center !important;
-    padding: 20x;
+    padding: 20px;
     margin: 20px;
     color: #fff; ;
 }
@@ -905,12 +918,18 @@ h5{
 .slider{
 background-color: var(--main-color);
 
+
 }
 .carousel-item{
   background-color: #B5163C !important;
+  animation: fadeInUp 2s ease-out forwards;
+  opacity: 0;
 }
 .slider p{
+  font-family: "gotham";
+  font-size: 25px;
   color: #fff;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .carousel-control-prev-icon,.carousel-control-next-icon{
   filter: none !important;

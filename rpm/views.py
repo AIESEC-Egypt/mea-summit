@@ -9,8 +9,12 @@ def registration(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            registration_instance = form.save(commit=False)
+            registration_instance.save()
+            form.save_m2m()
+
     else:
         form = RegistrationForm()
 
     return render(request, 'registration.html', {'form': form})
+

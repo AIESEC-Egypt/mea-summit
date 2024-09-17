@@ -19,7 +19,7 @@ SECRET_KEY = "django-insecure-3j96hah3@7@8b=o%q8gvmt-%_yx-wo^+m%3-pq1k9o66e%5_p+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-DEVELOPMENT_MODE= False
+DEVELOPMENT_MODE= True
 
 ALLOWED_HOSTS = ["*"]
 # Application definition
@@ -73,22 +73,22 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-#GRAPHENE = {
-# Add the line below
- #   'MIDDLEWARE': [
-  #  'graphql_jwt.middleware.JSONWebTokenMiddleware',
-#],
-#}
+GRAPHENE = {
+#Add the line below
+  'MIDDLEWARE': [
+  'graphql_jwt.middleware.JSONWebTokenMiddleware',
+],
+}
 
-#GRAPHQL_JWT = {
-#'JWT_VERIFY_EXPIRATION': False,
- #'JWT_EXPIRATION_DELTA': timedelta(minutes=1),
-#}
+GRAPHQL_JWT = {
+'JWT_VERIFY_EXPIRATION': False,
+ 'JWT_EXPIRATION_DELTA': timedelta(minutes=1),
+}
 
-#AUTHENTICATION_BACKENDS = [
- #'graphql_jwt.backends.JSONWebTokenBackend',
-#'django.contrib.auth.backends.ModelBackend',
-#]
+AUTHENTICATION_BACKENDS = [
+ 'graphql_jwt.backends.JSONWebTokenBackend',
+'django.contrib.auth.backends.ModelBackend',
+]
 
 
 ROOT_URLCONF = 'RPM_Backend.urls'
