@@ -19,6 +19,7 @@ allergies_choices = [
 
 
 class UserRegistration(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     personal_mail = models.EmailField(default='default@example.com')
