@@ -34,9 +34,6 @@
                 <a class="register-btn" href="{% url 'registration' %}">Register Now</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Egypt</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="{% url 'partners' %}">Partner With Us</a>
               </li>
             </ul>
@@ -113,22 +110,23 @@
           </div>
          
         <div class="button-container">
-          <input class="submit-btn" type="submit" value="Submit" )">
+          <input class="submit-btn" type="submit" value="Submit">
         </div>
       </div>
     </form>
     
   </section>
 
-  <footer>
-    <div class="container">
-      <img class="footer image" src="{% static 'Images/footer1.png' %}" alt="">
-      <div class="text">
-        <p>2024 &copy; courtesy of AIESEC in Egypt</p>
-        <p>Developed by <span>dxp Egypt team</span></p>
-      </div>
-    </div>
-  </footer>
+ <footer>
+          <div class="container">
+
+            <img src="{% static 'Images/footer1.png' %}" alt="">
+            <div class="text">
+              <p>2024 &copy; courtesy of AIESEC in Egypt</p>
+              <p>Developed by <a href="https://instagram.com/im_egypt" target="_blank" style="color:white"> <span> IM Egypt</span></a></p>
+            </div>
+          </div>
+        </footer>
 
   <!-- Include JavaScript Files -->
 
