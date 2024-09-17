@@ -194,7 +194,7 @@
 
   font-family: "New Amsterdam", sans-serif;
   background-color: #b5163c;
-  background-image: url("../Images/pyramids1.png");
+  background-image: url("../Images/pyramids1.webp");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -205,7 +205,7 @@
 
 .registeration {
   background-color: #b5163c;
-  background-image: url(../Images/reg/backg.png);
+  background-image: url(../Images/reg/backg.webp);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -236,7 +236,7 @@
 
 .partner {
   background-color: #b5163c;
-  background-image: url("../Images/partner/bkgd.png");
+  background-image: url("../Images/partner/bkgd.webp");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -577,7 +577,7 @@ footer p span {
 }
 
 .reg-sec {
-  background-image: url("../Images/reg/pattern3.png");
+  background-image: url("../Images/reg/pattern3.webp");
   background-color: var(--main-color);
   background-size: cover;
   background-repeat: no-repeat;
