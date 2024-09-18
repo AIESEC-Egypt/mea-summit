@@ -923,10 +923,9 @@ background-color: var(--main-color);
   background-color: #B5163C !important;
 
 }
-.carousel-caption.d-sm-block{
-  overflow: auto;
-  font-size: 20px;
-}
+
+
+
 .slider p{
   font-family: "gotham";
   font-size: 25px;
@@ -941,14 +940,24 @@ background-color: var(--main-color);
 background-color: #E7E6E6 !important;
 }
 
-
 @media (max-width: 768px) {
-  .carousel-item h5 {
-    font-size: 24px;
+  .carousel-item h4 {
+    font-size: 25px;
   }
   .carousel-item p {
     line-height: 1.5;
     padding: 10px;
+    font-size: 20px;
+  }
+}
 
+@media (max-width: 576px) {
+  .carousel-item h4 {
+    font-size: 20px;
+  }
+  .carousel-item p {
+    line-height: 1.5;
+    padding: 10px;
+    font-size: 15px;
   }
 }
