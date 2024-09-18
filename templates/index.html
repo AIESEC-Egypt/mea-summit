@@ -117,7 +117,7 @@
               </div>
               <div class="carousel-item">
                 <img src="{% static 'Images/slider.section/slider7.webp' %}"  class="d-block w-100" alt="...">
-                <div class="carousel-caption col-sm-2 col-md-4">
+                <div class="carousel-caption">
                   <h4>Global Village</h4>
                   <p>It is a vibrant celebration where delegates from 55+ countries showcase their unique cultures through booths and exhibitions. Each booth offers a glimpse into a nation's traditions, artistry, and flavors, creating a kaleidoscope of human heritage. Visitors journey through a tapestry of diverse experiences, fostering understanding and appreciation for our shared humanity.</p>
                 </div>
@@ -125,15 +125,15 @@
               
               <div class="carousel-item">
                 <img src="{% static 'Images/slider.section/slider.3.webp' %}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                   <h4>Gala Dinner</h4>
                   <p>A vibrant celebration where delegates from 55 countries showcase their unique cultures through booths and exhibitions. Each booth offers a glimpse into a nation's traditions, artistry, and flavors, creating a kaleidoscope of human heritage. Visitors journey through a tapestry of diverse experiences, fostering understanding and appreciation for our shared humanity.</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="{% static 'Images/slider.section/slider.1.webp' %}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Partners Day</h5>
+                <div class="carousel-caption">
+                  <h4>Partners Day</h4>
                   <p>This is a celebration of the success AIESEC achieves each year due to the support of our partners and experience followed by the most exquisite dining experience they’ve ever had.</p>
                 </div>
               </div>
@@ -252,6 +252,9 @@
     const textElement = document.getElementById('animated-text');
     const finalText = textElement.textContent; // The final text to display
 
+    // Add the "text-generate" class to the text element
+    textElement.classList.add('text-generate');
+
     // Function to generate random characters
     const getRandomChar = () => String.fromCharCode(Math.floor(Math.random() * 26) + 65); // A-Z
 
@@ -282,6 +285,5 @@
 
     animateText();
 });
-
 
 </script>
