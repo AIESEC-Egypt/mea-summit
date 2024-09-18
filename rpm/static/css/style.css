@@ -917,13 +917,15 @@ h5{
 
 .slider{
 background-color: var(--main-color);
-animation: fadeInUp 2s ease-out forwards;
-opacity: 0;
 
 }
 .carousel-item{
   background-color: #B5163C !important;
 
+}
+.carousel-caption.d-sm-block{
+  overflow: auto;
+  font-size: 20px;
 }
 .slider p{
   font-family: "gotham";

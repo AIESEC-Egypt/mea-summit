@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin  # used for more control over the user model
 import datetime
+from django.utils import timezone
+
 # Create your models here.
 
 Nationality_choices = [
@@ -19,7 +21,7 @@ allergies_choices = [
 
 
 class UserRegistration(models.Model):
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(default=timezone.now, blank=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     personal_mail = models.EmailField(default='default@example.com')
