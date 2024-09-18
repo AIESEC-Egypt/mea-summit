@@ -26,6 +26,7 @@ class UserRegistration(models.Model):
     last_name = models.CharField(max_length=50)
     personal_mail = models.EmailField(default='default@example.com')
     whatsapp_number = models.CharField(max_length=50, null=True, blank=True)
+    country_code = models.CharField(max_length=3,default=+20)  # Adjust max_length if needed
     telegram_username = models.CharField(max_length=50, blank=True, null=True)
     country = models.CharField(max_length=50, blank=True, null=True)
     nationality = models.CharField(max_length=50, null=True, blank=True)

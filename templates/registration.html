@@ -78,8 +78,9 @@
             <input type="email" name="personal_mail" placeholder="example@gmail.com" required>
           </div>
           <div class="input-field">
-            <label>WhatsApp Number</label>
+            <label for="whatsapp_number">WhatsApp Number</label>
             <input type="tel" name="whatsapp_number" id="whatsapp_number" placeholder="ex: 12XXXXXXXX" required>
+            <input type="hidden" name="country_code" id="country_code" required>
           </div>
           <div class="input-field">
             <label>Telegram Username</label>
@@ -249,11 +250,18 @@
  
     <script>
       const phoneInputField = document.querySelector("#whatsapp_number");
+      const countryCodeInput = document.querySelector("#country_code");
+      
       const phoneInput = window.intlTelInput(phoneInputField, {
         initialCountry: "eg",  // Set Egypt as the default country
-        preferredCountries: ["eg"], // Prioritize these countries at the top
-        utilsScript:
-          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        preferredCountries: ["eg"], // Prioritize Egypt at the top
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        autoFormat: true, // Enable automatic formatting
+        onlyCountries: true, // Restrict to valid countries
+      });
+      
+      phoneInputField.addEventListener("change", function () {
+        countryCodeInput.value = phoneInput.getSelectedCountryData().dialCode;
       });
    
     </script>
