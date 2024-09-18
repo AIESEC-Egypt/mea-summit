@@ -7,6 +7,8 @@ class PartnerRegistration(DjangoObjectType):
     class Meta:
         model = Partner
         fields = '__all__'
+        created_at = graphene.DateTime()
+
 
 
 class PartnerRegistrationInput(graphene.InputObjectType):
@@ -26,11 +28,11 @@ class PartnerRegistrationMutation(graphene.Mutation):
     class Arguments:
         input = PartnerRegistrationInput(required=True)
 
-    partner = graphene.Field(PartnerRegistration)
+    partnerr = graphene.Field(PartnerRegistration)
 
     def mutate(self, info, input):
 
-        partnerr = Partner(
+        partner = Partner(
             company_name=input.company_name,
             company_field=input.company_field,
             company_size=input.company_size,
@@ -42,8 +44,8 @@ class PartnerRegistrationMutation(graphene.Mutation):
             contact_phone=input.contact_phone,
             position=input.position
         )
-        partnerr.save()
-        return PartnerRegistrationMutation(partner=partnerr)
+        partner.save()
+        return PartnerRegistrationMutation(partner=partner)
 
 
 class Mutation(graphene.ObjectType):
@@ -51,8 +53,7 @@ class Mutation(graphene.ObjectType):
 
 
 class Query(graphene.ObjectType):
-    all_partners = graphene.List(PartnerRegistration, date_from=graphene.DateTime(), page=graphene.Int(), per_page=graphene.Int())
-    partner = graphene.Field(PartnerRegistration, id=graphene.ID(required=True))
+    all_partners = graphene.List(PartnerRegistration)
 
     def resolve_all_partners(self, info, **kwargs):
         date_from = kwargs.get('date_from')

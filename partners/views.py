@@ -5,8 +5,9 @@ def partners(request):
     if request.method == 'POST':
         form = PartnerForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('partners')  # Redirect after POST to avoid re-submission
+            partners_instance = form.save(commit=False)
+            partners_instance.save()
+            form.save_m2m()
     else:
         form = PartnerForm()
 

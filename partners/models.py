@@ -1,10 +1,12 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
 
 
 class Partner(models.Model):
+    created_at = models.DateTimeField(default=timezone.now, blank=True)
     company_name = models.CharField(max_length=255)
     company_field = models.CharField(max_length=255)
     company_size = models.CharField(max_length=255)
