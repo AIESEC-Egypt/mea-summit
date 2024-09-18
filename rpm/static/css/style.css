@@ -603,7 +603,7 @@ footer p span {
 .input-fields {
   display: grid;
   justify-content: center;
-  grid-template-columns: minmax(400px, 600px);
+  grid-template-columns: minmax(300px, 600px);
   gap: 24px;
 }
 
