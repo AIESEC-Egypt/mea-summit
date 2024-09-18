@@ -28,7 +28,7 @@ class PartnerRegistrationMutation(graphene.Mutation):
     class Arguments:
         input = PartnerRegistrationInput(required=True)
 
-    partnerr = graphene.Field(PartnerRegistration)
+    partner = graphene.Field(PartnerRegistration)
 
     def mutate(self, info, input):
 
