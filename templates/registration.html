@@ -12,6 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=New+Amsterdam&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'Fonts/AislingFreeDemo.ttf' %}">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   <title>MEA Summit</title>
   <link rel="icon" href="{% static 'Images/logo1.png' %}" type="image/x-icon">
 </head>
@@ -46,7 +51,7 @@
   <div class="registeration">
     <div class="home-content">
       <h1 id="animated-text" class="reg">REGISTER NOW</h1>
-      <button id="showCountdownBtn">Wanna miss Round 1?</button>
+      <button id="showCountdownBtn">Wanna miss Round 2?</button>
     </div>
     <div id="countdown" style="display: none;"></div>
   </div>
@@ -62,27 +67,27 @@
         <div class="input-fields">
           <div class="input-field">
             <label>First Name</label>
-            <input type="text" name="first_name" required>
+            <input type="text" name="first_name" placeholder="ex: Mark" required>
           </div>
           <div class="input-field">
             <label>Last Name</label>
-            <input type="text" name="last_name" required>
+            <input type="text" name="last_name" placeholder="ex: Jose" required>
           </div>
           <div class="input-field">
             <label>Personal Email</label>
-            <input type="email" name="personal_mail" required>
+            <input type="email" name="personal_mail" placeholder="example@gmail.com" required>
           </div>
           <div class="input-field">
             <label>WhatsApp Number</label>
-            <input type="text" name="whatsapp_number" required>
+            <input type="tel" name="whatsapp_number" id="whatsapp_number" placeholder="ex: 12XXXXXXXX" required>
           </div>
           <div class="input-field">
             <label>Telegram Username</label>
-            <input type="text" name="telegram_username" required>
+            <input type="text" name="telegram_username" placeholder="ex: @username" required>
           </div>
           <div class="input-field">
             <label>Country of Citizenship</label>
-            <input type="text" name="country" required>
+            <input type="text" name="country" placeholder="ex: Egypt" required>
           </div>
           <div class="input-field">
             <label>Position</label>
@@ -120,15 +125,15 @@
           </div>
           <div class="input-field">
             <label>AIESEC Email</label>
-            <input type="email" name="aiesec_mail" required>
+            <input type="email" name="aiesec_mail" placeholder="example@aiesec.net" required>
           </div>
           <div class="input-field">
             <label>Date of Birth</label>
-            <input type="date" name="dob" required>
+            <input type="date" name="dob" placeholder="MM/DD/YYYY" required>
           </div>
           <div class="input-field">
             <label>Nationality</label>
-            <input type="text" name="nationality" required>
+            <input type="text" name="nationality" placeholder="ex: Egypt" required>
           </div>
 
           <div class="input-field">
@@ -190,19 +195,19 @@
         <div class="input-fields">
           <div class="input-field">
             <label>What is your main motivation to be part of MEAS'24 Egypt?</label>
-            <input type="text" name="motivation" required>
+            <input type="text" name="motivation" placeholder="Tell us about it" required>
           </div>
           <div class="input-field">
             <label>What unique events would you like to see at MEAS'24 Egypt?</label>
-            <input type="text" name="unique_events" required>
+            <input type="text" name="unique_events" placeholder="Tell us about it" required>
           </div>
           <div class="input-field">
             <label>What experiences are you looking to gain from this conference?</label>
-            <input type="text" name="experiences" required>
+            <input type="text" name="experiences" placeholder="Tell us about it" required>
           </div>
           <div class="input-field">
             <label>What are you expecting from MEAS'24 Egypt?</label>
-            <input type="text" name="expectations" required>
+            <input type="text" name="expectations" placeholder="Tell us about it" required>
           </div>
           <div class="input-field">
             <label>Do you have any kind of allergies or food preferences?</label>
@@ -222,6 +227,7 @@
           <input class="submit-btn" type="submit" value="Submit" onclick="validateStep2()">
         </div>
       </div>
+
     </form>
     
   </section>
@@ -237,8 +243,20 @@
   </footer>
 
   <!-- Include JavaScript Files -->
+  <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/countdown.js' %}"></script>
   <script src="{% static 'js/form.js' %}"></script>
+ 
+    <script>
+      const phoneInputField = document.querySelector("#whatsapp_number");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry: "eg",  // Set Egypt as the default country
+        preferredCountries: ["eg"], // Prioritize these countries at the top
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+   
+    </script>
 
   <script>
       // Initialize the countdown
