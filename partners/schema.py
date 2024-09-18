@@ -51,9 +51,10 @@ class Mutation(graphene.ObjectType):
 
 
 class Query(graphene.ObjectType):
-    all_partners = graphene.List(PartnerRegistration)
+    all_partners = graphene.List(PartnerRegistration, date_from=graphene.DateTime(), page=graphene.Int(), per_page=graphene.Int())
+    partner = graphene.Field(PartnerRegistration, id=graphene.ID(required=True))
 
-    def resolve_all_partners(root, info, **kwargs):
+    def resolve_all_partners(self, info, **kwargs):
         date_from = kwargs.get('date_from')
         page = kwargs.get('page', 1)
         per_page = kwargs.get('per_page', 10)
@@ -66,10 +67,8 @@ class Query(graphene.ObjectType):
         else:
             return Partner.objects.all()[start_index:end_index]
 
-
+    def resolve_partner(self, info, id):
+        return Partner.objects.get(pk=id)
 
 schema = graphene.Schema(query=Query, mutation=Mutation)
-
-
-
 
