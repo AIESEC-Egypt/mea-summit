@@ -53,7 +53,7 @@ class Mutation(graphene.ObjectType):
 class Query(graphene.ObjectType):
     all_partners = graphene.List(PartnerRegistration)
 
-    def resolve_all_users(root, info, **kwargs):
+    def resolve_all_partners(root, info, **kwargs):
         date_from = kwargs.get('date_from')
         page = kwargs.get('page', 1)
         per_page = kwargs.get('per_page', 10)
