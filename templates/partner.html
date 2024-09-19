@@ -1,27 +1,28 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-  <link rel="stylesheet" href="{% static 'js/bootstrap.bundle.min.js' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=New+Amsterdam&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'Fonts/AislingFreeDemo.ttf' %}">
-  <title>MEA Summit</title>
-  <link rel="icon" href="{% static 'Images/logo1.png' %}" type="image/x-icon">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'js/bootstrap.bundle.min.js' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=New+Amsterdam&display=swap" rel="stylesheet">
+        <link href="{%static 'vendors/aos/aos.css'%}" rel="stylesheet">
+        <title>Partner With Us</title>
+        <link rel="icon" href="{% static 'Images/logo1.png' %}" type="image/x-icon">
+        
+    </head>
 
 <body>
   <header>
     <div class="nav">
       <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
-                             <a class="navbar-brand" href="#">
+                             <a class="navbar-brand" href="/">
                   <img href="index.html" src="{% static 'Images/logorpm.png' %}" alt="Logo" style="width: 150px;"> <!-- Adjust the size as needed -->
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +30,7 @@
               </button>
               <div class="collapse navbar-collapse" id="sidebarMenu">
                 <div class="sidebar-header" >
-                  <a class="navbar-brand" href="#">
+                  <a class="navbar-brand" href="/">
                       <img src="{% static 'Images/logorpm.png' %}" alt="Logo" style="width: 200px; margin-left: auto;margin-bottom: 30px;margin-right: auto;"> <!-- Adjust the size as needed -->
                   </a>
               </div>
@@ -44,7 +45,10 @@
               </div>
           </div>
       </nav>
+  </div>
+  
   </header>
+
 
   <div class="partner">
     <div class="home-content">
@@ -139,3 +143,24 @@
 </body>
 
 </html>
+
+<script>
+  const sidebar = document.getElementById('sidebarMenu');
+  const toggleButton = document.querySelector('.navbar-toggler');
+  
+  toggleButton.addEventListener('click', () => {
+    if(document.querySelector('false')){
+      sidebar.classList.toggle('show');
+      toggleButton.classList.toggle('collapsed');
+    }
+    else{
+      sidebar.classList.toggle('hide');
+      toggleButton.classList.toggle('collapsed');
+    }
+    
+    
+  });
+
+</script>
+<script src = "{%static 'js/bootstrap.bundle.min.js'%}"></script>
+
