@@ -6,7 +6,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
+body{
+  background-color: #B5163C !important;
+}
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 12px;
@@ -34,7 +36,7 @@
 /* Navbar Styles */
 .navbar {
   padding: 1rem 2rem;
-  background-color: transparent;
+  background-color: transparent !important;
   /* Semi-transparent background */
   position: fixed;
   top: 0;
@@ -113,9 +115,134 @@
 }
 
 .navbar-brand img {
-  max-width: 150px;
+  max-width: 500px;
   /* Adjust the size of the logo */
 }
+/* Basic Styles for Navbar */
+.navbar {
+  background-color: #000; /* Background color */
+  padding: 1rem; /* Adjust padding */
+}
+#sidebarMenu .sidebar-header {
+  /* Styles for the sidebar header */
+  display: none;
+  /* Other styles as needed */
+}
+
+/* Sidebar for smaller screens */
+@media (max-width: 992px) {
+  #sidebarMenu {
+      position: fixed;
+      top: 0;
+      left: -100%; /* Initially hidden off the screen */
+      width: 250px;
+      height: 100%;
+      background-color: #212121; /* Sidebar background color */
+      transition: all 0.3s ease;
+      padding-top: 2rem;
+  }
+
+  /* Show sidebar when toggler is clicked */
+  .navbar-toggler.collapsed + #sidebarMenu {
+      left: 0; /* Slide sidebar into view */
+  }
+
+  #sidebarMenu .sidebar-header {
+    display: block;
+    /* Other styles as needed */
+  }
+
+  /* Adjust items within sidebar */
+  .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+  }
+
+  .nav-item {
+      margin: 1rem 0;
+  }
+
+  .nav-link {
+      color: #fff; /* White text color */
+      padding: 10px 20px;
+      display: block;
+      width: 100%;
+  }
+
+  .navbar-toggler {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+  }
+}
+
+/* Add specific styles for the "Register Now" button */
+.register-btn {
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #B5163C;
+  /* Orange text color */
+  border: 2px solid transparent;
+  /* Orange border */
+  border-radius: 20px;
+  /* Rounded corners */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Smooth transition */
+}
+
+.hamburger{
+  padding-left: 1.5rem;
+}
+@media (min-width: 767px){
+  .hamburger{
+    display: none;
+  }
+}
+
+
+
+.navbar-toggler-icon{
+  padding: 0;
+  width: 20px;
+  display: flex;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  backdrop-filter: blur(10px);
+  position: relative;
+  height: 1.3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.navbar-toggler-icon::before, .navbar-toggler-icon::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 60%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 2px;
+}
+
+.navbar-toggler-icon::before{
+  top: -4.5px
+}
+
+.navbar-toggler-icon::after{
+  top: 4.5px
+}
+
+
 
 /* Color Changing Text Animation */
 /* Pulsing Text Animation */
@@ -403,7 +530,7 @@ h3 {
 }
 
 .aboute-content {
-  animation: fadeInUp 2s ease-out forwards;
+ /* animation: fadeInUp 2s ease-out forwards;
   opacity: 0;
   /* Start with opacity 0 for animation */
   font-family: 'gotham',  serif;
@@ -909,7 +1036,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     right: 12px;
     top: 80px;
     /* background-color: #b5163c; */
-    border-radius: 20px;
     padding: 10px;
   }
   .navbar-nav,

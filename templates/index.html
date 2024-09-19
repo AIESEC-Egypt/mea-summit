@@ -9,34 +9,40 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=New+Amsterdam&display=swap" rel="stylesheet">
-      
+        <link href="{%static 'vendors/aos/aos.css'%}" rel="stylesheet">
         <title>MEA Summit</title>
         <link rel="icon" href="{% static 'Images/logo1.png' %}" type="image/x-icon">
         
     </head>
     <header>
-        <div class="nav">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
+      <div class="nav">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                               <a class="navbar-brand" href="#">
+                    <img href="index.html" src="{% static 'Images/logorpm.png' %}" alt="Logo" style="width: 150px;"> <!-- Adjust the size as needed -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="sidebarMenu">
+                  <div class="sidebar-header" >
                     <a class="navbar-brand" href="#">
-                        <img href="index.html" src="{% static 'Images/logorpm.png' %}" alt="" style="width: 300%;"> <!-- Adjust the size as needed -->
+                        <img src="{% static 'Images/logorpm.png' %}" alt="Logo" style="width: 200px; margin-left: auto;margin-bottom: 30px;margin-right: auto;"> <!-- Adjust the size as needed -->
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto"> <!-- Aligning to the right -->
-                            <li class="nav-item">
-                                <a class="register-btn" href="/registration.html">Register Now</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/partner.html">Partner With Us</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-            </nav>
-        </div>
+                    <ul class="navbar-nav ms-auto"> <!-- Aligning to the right -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/registration.html">Register Now</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/partner.html">Partner With Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
     </header>
 
 <!--
@@ -76,8 +82,8 @@
 <!-- end home sec-->
 <!-- about-->
 
-        <section class="aboute" data-aos="fade-up" data-aos-duration="3000">
-            <div class="aboute-content" >
+        <section class="aboute" >
+            <div class="aboute-content" data-aos="fade-up" data-aos-duration="2000">
             <h3>What Is MEA Summit</h3>
             
             <p>Middle East and Africa Summit is a creation of a regional plenary, that would witness 150+ young professionals hailing from 55+ countries along with business leaders, entrepreneurs to enunciate the idea of peace and fulfilment of humankind's potential.</p>
@@ -95,17 +101,17 @@
 
 
 
-            <h5>You'll Experience</h5>
         </section>
-        <section class="slider">
-          <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <section class="slider" data-aos="fade-up" data-aos-duration="2000">
+          <h5>You'll Experience</h5>
+
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" >
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 3"></button>
+
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="10000">
@@ -127,7 +133,13 @@
                 <img src="{% static 'Images/slider.section/slider.3.webp' %}" class="d-block w-100" alt="...">
                 <div class="carousel-caption">
                   <h4>Gala Dinner</h4>
-                  <p>A vibrant celebration where delegates from 55 countries showcase their unique cultures through booths and exhibitions. Each booth offers a glimpse into a nation's traditions, artistry, and flavors, creating a kaleidoscope of human heritage. Visitors journey through a tapestry of diverse experiences, fostering understanding and appreciation for our shared humanity.</p>
+                  <p>is The initial hour of the gala
+                    dinner serves as a prelude where esteemed international
+                    partners, including prominent organizations such as DHL
+                    and Microsoft, convene and assemble. This specific
+                    timeframe presents an exceptional occasion to showcase
+                    your work on a grand scale, fostering invaluable B2B
+                    connections.</p>
                 </div>
               </div>
               <div class="carousel-item">
@@ -153,12 +165,12 @@
 
 
 
-        <section class="gallery">
+        <section class="gallery" >
           <div class="container">
-            <h3 >See Your Name in Hieroglyphic</h3>
-            <input type="text" id="singleField" name="singleField" placeholder="Enter Your name">
+            <h3 data-aos="fade-up" data-aos-duration="2000">See Your Name in Hieroglyphic</h3>
+            <input type="text" id="singleField" name="singleField" placeholder="Enter Your name" data-aos="fade-up" data-aos-duration="2000">
             <div id="display"></div>
-              <div class="scroller">
+              <div class="scroller" data-aos="fade-up" data-aos-duration="2000">
               <div class="scroller-inner">
                 <img src="{% static 'Images/event_1.jpg' %}" alt="">
                 <img src="{% static 'Images/event_2.jpg' %}" alt="">
@@ -286,4 +298,14 @@
     animateText();
 });
 
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+  this.classList.toggle('collapsed');
+  document.getElementById('sidebarMenu').classList.toggle('show');
+});
+
+
+</script>
+<script src="{%static 'js/aos.js'%}"></script>
+<script>
+  AOS.init();
 </script>
