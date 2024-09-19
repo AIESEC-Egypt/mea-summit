@@ -25,27 +25,30 @@
   <header>
     <div class="nav">
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'index' %}">
-            <img href="{% url 'index' %}" src="{% static 'Images/logorpm.png' %}" alt="" style="width: 100%;"> <!-- Adjust the size as needed -->
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto"> <!-- Aligning to the right -->
-              <li class="nav-item">
-                <a class="register-btn" href="{% url 'registration' %}">Register Now</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/partner.html">Partner With Us</a>
-              </li>
-            </ul>
+          <div class="container-fluid">
+                             <a class="navbar-brand" href="#">
+                  <img href="index.html" src="{% static 'Images/logorpm.png' %}" alt="Logo" style="width: 150px;"> <!-- Adjust the size as needed -->
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="sidebarMenu">
+                <div class="sidebar-header" >
+                  <a class="navbar-brand" href="#">
+                      <img src="{% static 'Images/logorpm.png' %}" alt="Logo" style="width: 200px; margin-left: auto;margin-bottom: 30px;margin-right: auto;"> <!-- Adjust the size as needed -->
+                  </a>
+              </div>
+                  <ul class="navbar-nav ms-auto"> <!-- Aligning to the right -->
+                      <li class="nav-item">
+                          <a class="nav-link" href="/registration.html">Register Now</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/partner.html">Partner With Us</a>
+                      </li>
+                  </ul>
+              </div>
           </div>
-        </div>
       </nav>
-    </div>
   </header>
 
   <div class="registeration">
@@ -74,6 +77,20 @@
             <input type="text" name="last_name" placeholder="ex: Jose" required>
           </div>
           <div class="input-field">
+            <label>Gender</label>
+            <select name="gender" required>
+              <option value="" selected>------</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+            </div>
+          <div class="input-field">
+            <label>Date of Birth</label>
+            <input type="date" name="dob" placeholder="MM/DD/YYYY" required>
+          </div>
+          
+          <div class="input-field">
             <label>Personal Email</label>
             <input type="email" name="personal_mail" placeholder="example@gmail.com" required>
           </div>
@@ -89,6 +106,16 @@
           <div class="input-field">
             <label>Country of Citizenship</label>
             <input type="text" name="country" placeholder="ex: Egypt" required>
+          </div>
+      
+
+          <div class="input-field">
+            <label>Nationality</label>
+            <input type="text" name="nationality" placeholder="ex: Egypt" required>
+          </div>
+          <div class="input-field">
+            <label>AIESEC Email</label>
+            <input type="email" name="aiesec_mail" placeholder="example@aiesec.net" required>
           </div>
           <div class="input-field">
             <label>Position</label>
@@ -124,19 +151,6 @@
               <!-- Add more options as needed -->
               </select>
           </div>
-          <div class="input-field">
-            <label>AIESEC Email</label>
-            <input type="email" name="aiesec_mail" placeholder="example@aiesec.net" required>
-          </div>
-          <div class="input-field">
-            <label>Date of Birth</label>
-            <input type="date" name="dob" placeholder="MM/DD/YYYY" required>
-          </div>
-          <div class="input-field">
-            <label>Nationality</label>
-            <input type="text" name="nationality" placeholder="ex: Egypt" required>
-          </div>
-
           <div class="input-field">
             <label>Entity</label>
             <select name="entity" required>

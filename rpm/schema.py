@@ -13,6 +13,7 @@ class UserRegistrationType(DjangoObjectType):
 class UserRegistrationInput(graphene.InputObjectType):
     first_name = graphene.String(required=True)
     last_name = graphene.String(required=True)
+    gender = graphene.String(required=True)
     PersonalEmail = graphene.String(required=True)
     phone_number = graphene.String(required=True)
     telegram_username = graphene.String(required=True)
@@ -45,6 +46,7 @@ class RegistrationMutation(graphene.Mutation):
             
             first_name=input.first_name,
             last_name=input.last_name,
+            gender=input.gender,
             PersonalEmail=input.PersonalEmail,
             phone_number=input.phone_number,
             telegram_username=input.telegram_username,

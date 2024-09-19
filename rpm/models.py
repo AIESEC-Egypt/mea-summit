@@ -24,6 +24,7 @@ class UserRegistration(models.Model):
     created_at = models.DateTimeField(default=timezone.now, blank=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
+    gender = models.CharField(max_length=50,default='')
     personal_mail = models.EmailField(default='default@example.com')
     whatsapp_number = models.CharField(max_length=50, null=True, blank=True)
     country_code = models.CharField(max_length=3,default=+20)  # Adjust max_length if needed
