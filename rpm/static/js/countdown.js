@@ -1,4 +1,4 @@
-const countdownDate = new Date("2024-09-20T23:59:59").getTime();
+const countdownDate = new Date("2024-09-29T23:59:59").getTime();
 
 // Update the countdown every 1 second
 function startCountdown() {
