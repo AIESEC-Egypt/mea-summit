@@ -298,9 +298,20 @@
     animateText();
 });
 
-document.querySelector('.navbar-toggler').addEventListener('click', function() {
-  this.classList.toggle('collapsed');
-  document.getElementById('sidebarMenu').classList.toggle('show');
+const sidebar = document.getElementById('sidebarMenu');
+const toggleButton = document.querySelector('.navbar-toggler');
+
+toggleButton.addEventListener('click', () => {
+  if(document.querySelector('false')){
+    sidebar.classList.toggle('show');
+    toggleButton.classList.toggle('collapsed');
+  }
+  else{
+    sidebar.classList.toggle('hide');
+    toggleButton.classList.toggle('collapsed');
+  }
+  
+  
 });
 
 
