@@ -26,7 +26,6 @@ urlpatterns = [
     path('', include('rpm.urls')),
     path('', include('partners.urls')),
     path('graphql/', GraphQLView.as_view(graphiql=True, schema=schema)),
-    path('graphql/', GraphQLView.as_view(graphql=True, schema=schema)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG == False:
