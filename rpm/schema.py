@@ -117,28 +117,5 @@ class Mutation(graphene.ObjectType):
 class Query(graphene.ObjectType):
     all_users = graphene.List(UserRegistrationType)
 
-    def resolve_all_users(root, info, **kwargs):
-        date_from = kwargs.get('date_from')
-        page = kwargs.get('page', 1)
-        per_page = kwargs.get('per_page', 10)
-
-        start_index = (page - 1) * per_page
-        end_index = start_index + per_page
-
-        try:
-            # Use filter and order for better performance
-            if date_from is not None:
-                users = UserRegistration.objects.order_by('created_at').filter(created_at__range=(date_from, datetime.datetime.now()))[start_index:end_index]
-            else:
-                users = UserRegistration.objects.order_by('created_at').all()[start_index:end_index]
-        except ValueError as e:
-            # Handle invalid date format
-            print(f"Invalid date format: {e}")
-            return None
-
-        # Consider fetching total count for pagination UI
-        # total_count = UserRegistration.objects.filter(...).count()
-
-        return users
 
 schema = graphene.Schema(query=Query, mutation=Mutation)
