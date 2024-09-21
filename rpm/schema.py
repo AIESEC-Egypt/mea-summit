@@ -67,11 +67,11 @@ class RegistrationMutation(graphene.Mutation):
             last_name=input.last_name,
             nickname=input.nickname,  # Assuming nickname is present in input
             gender=input.gender,
-            whatsapp_number=input.phone_number,  # Assuming phone_number is whatsapp number
+            whatsapp_number=input.whatsapp_number,  # Assuming phone_number is whatsapp number
             telegram_username=input.telegram_username,
             country=input.country,
             nationality=input.nationality,
-            aiesec_mail=input.AiesecEmail,  # Use lowercase for consistency
+            aiesec_mail=input.aiesec_mail,  # Use lowercase for consistency
             position=input.Position,
             dob=input.dob,  # Assuming dob format
             entity=input.entity,
