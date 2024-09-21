@@ -4,6 +4,8 @@ from .forms import RegistrationForm
 def index(request):
     return render(request, 'index.html')
 
+def thankyou(request):
+    return render(request, 'thankyou.html')
 
 def registration(request):
     if request.method == 'POST':
@@ -12,6 +14,7 @@ def registration(request):
             registration_instance = form.save(commit=False)
             registration_instance.save()
             form.save_m2m()
+            return redirect('/thankyou.html')  # Assuming you have a URL named 'thankyou'
 
     else:
         form = RegistrationForm()

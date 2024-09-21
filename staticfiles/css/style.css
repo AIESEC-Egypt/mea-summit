@@ -366,7 +366,18 @@ body{
   text-align: center;
 
 }
-
+.thankyou {
+  background-color: #b5163c;
+  background-image: url("../Images/thankyou.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
 
 .partner {
   background-color: #b5163c;
@@ -379,6 +390,7 @@ body{
   align-items: center;
   flex-direction: column;
 }
+
 
 .partner::after {
   content: "";
