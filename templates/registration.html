@@ -79,6 +79,10 @@
             <input type="text" name="last_name" placeholder="ex: Jose" required>
           </div>
           <div class="input-field">
+            <label>Nickname</label>
+            <input type="text" name="nickname" placeholder="ex: Bob" required>
+          </div>
+          <div class="input-field">
             <label>Gender</label>
             <select name="gender" required>
               <option value="" selected>------</option>
@@ -93,11 +97,11 @@
           </div>
           
           <div class="input-field">
-            <label>Personal Email</label>
-            <input type="email" name="personal_mail" placeholder="example@gmail.com" required>
+            <label>AIESEC Email</label>
+            <input type="email" name="aiesec_mail" placeholder="example@aiesec.net" required>
           </div>
           <div class="input-field">
-            <label for="whatsapp_number">WhatsApp Number</label>
+            <label>WhatsApp Number</label>
             <input type="tel" name="whatsapp_number" id="whatsapp_number" placeholder="ex: 12XXXXXXXX" required>
             <input type="hidden" name="country_code" id="country_code" required>
           </div>
@@ -105,54 +109,7 @@
             <label>Telegram Username</label>
             <input type="text" name="telegram_username" placeholder="ex: @username" required>
           </div>
-          <div class="input-field">
-            <label>Country of Citizenship</label>
-            <input type="text" name="country" placeholder="ex: Egypt" required>
-          </div>
-      
 
-          <div class="input-field">
-            <label>Nationality</label>
-            <input type="text" name="nationality" placeholder="ex: Egypt" required>
-          </div>
-          <div class="input-field">
-            <label>AIESEC Email</label>
-            <input type="email" name="aiesec_mail" placeholder="example@aiesec.net" required>
-          </div>
-          <div class="input-field">
-            <label>Position</label>
-            <select name="position" required>
-              <option value="" selected>------</option>
-              <option value="MCP">MCP</option>
-              <option value="MCVP EwA">MCVP EwA</option>
-              <option value="MCVP FnL">MCVP FnL</option>
-              <option value="MCVP FM">MCVP FM</option>
-              <option value="MCVP BD">MCVP BD</option>
-              <option value="MCVP B2B">MCVP B2B</option>
-              <option value="MCVP IM">MCVP IM</option>
-              <option value="MCVP PR">MCVP PR</option>
-              <option value="MCVP MKTG">MCVP MKTG</option>
-              <option value="MCVP OPS">MCVP OPS</option>
-              <option value="MCVP oGX">MCVP oGX</option>
-              <option value="MCVP oGV">MCVP oGV</option>
-              <option value="MCVP oGT">MCVP oGT</option>
-              <option value="MCVP iCX">MCVP iCX</option>
-              <option value="MCVP iGV">MCVP iGV</option>
-              <option value="MCVP iGT">MCVP iGT</option>
-              <option value="MCVP OD">MCVP OD</option>
-              <option value="MCVP ODM">MCVP ODM</option>
-              <option value="MCVP Expansions">MCVP Expansions</option>
-              <option value="MCVP MXP">MCVP MXP</option>
-              <option value="LCP">LCP</option>
-              <option value="LCPe">LCPe</option>
-              <option value="CEEDer">CEEDer</option>
-              <option value="GS">GS</option>
-
-
-
-              <!-- Add more options as needed -->
-              </select>
-          </div>
           <div class="input-field">
             <label>Entity</label>
             <select name="entity" required>
@@ -190,42 +147,167 @@
               <!-- Add more options as needed -->
               </select>
           </div>
+          <div class="input-field">
+            <label>Position</label>
+            <select name="position" required>
+              <option value="" selected>------</option>
+              <option value="MCP">MCP</option>
+              <option value="MCVP EwA">MCVP EwA</option>
+              <option value="MCVP FnL">MCVP FnL</option>
+              <option value="MCVP FM">MCVP FM</option>
+              <option value="MCVP BD">MCVP BD</option>
+              <option value="MCVP B2B">MCVP B2B</option>
+              <option value="MCVP IM">MCVP IM</option>
+              <option value="MCVP PR">MCVP PR</option>
+              <option value="MCVP MKTG">MCVP MKTG</option>
+              <option value="MCVP OPS">MCVP OPS</option>
+              <option value="MCVP oGX">MCVP oGX</option>
+              <option value="MCVP oGV">MCVP oGV</option>
+              <option value="MCVP oGT">MCVP oGT</option>
+              <option value="MCVP iCX">MCVP iCX</option>
+              <option value="MCVP iGV">MCVP iGV</option>
+              <option value="MCVP iGT">MCVP iGT</option>
+              <option value="MCVP OD">MCVP OD</option>
+              <option value="MCVP ODM">MCVP ODM</option>
+              <option value="MCVP Expansions">MCVP Expansions</option>
+              <option value="MCVP MXP">MCVP MXP</option>
+              <option value="LCP">LCP</option>
+              <option value="LCPe">LCPe</option>
+              <option value="CEEDer">CEEDer</option>
+              <option value="GS">GS</option>
+
+
+
+              <!-- Add more options as needed -->
+              </select>
+          </div>
+          <div class="input-field">
+            <label>Which LC are you coming from?</label>
+            <input type="text" name="lc" placeholder="If you are MC, Write MC" required>
+          </div>
+          <div class="input-field">
+            <label>Emergency contact</label>
+            <input type="tel" name="emergency" id="emergency" placeholder="ex: 12XXXXXXXX" required>
+            <input type="hidden" name="country_code1" id="country_code1" required>
+          </div>
           
        <!--   <div class="input-field1">
             <label for="image">Upload your image</label>
             <input type="file" name="image" id="image" accept="image/*" required>
           </div>-->
           <div>
-            <label for="formFileLg" class="input-field1">Upload your image</label>
-            <input class="form-control form-control-lg" id="image" name="image" type="file">
+            <label class="input-field1">Upload your image</label>
+            <input class="form-control form-control-lg" id="image" name="image" type="file" required>
           </div>
 
           <div class="button-container">
-            <button class="next-btn" type="button" id="nextButton" onclick="validateStep1()">Next</button>
+            <button class="next-btn" type="button" id="nextButton">Next</button>
           </div>
         </div>
       </div>
     
-      <!-- Step 2: AIESEC Details -->
+
+
+
       <div class="page2 page" id="step2" style="display: none;">
-        <h2>Delegate Experience Details</h2>
+        <h2>Travel Details</h2>
         <div class="input-fields">
           <div class="input-field">
-            <label>What is your main motivation to be part of MEAS'24 Egypt?</label>
-            <input type="text" name="motivation" placeholder="Tell us about it" required>
+            <label>Country of Residency</label>
+            <input type="text" name="country" placeholder="ex: Egypt" required>
+          </div>
+
+          <div class="input-field">
+           <label>Nationality</label>
+            <input type="text" name="nationality" placeholder="ex: Egypt" required>
           </div>
           <div class="input-field">
-            <label>What unique events would you like to see at MEAS'24 Egypt?</label>
-            <input type="text" name="unique_events" placeholder="Tell us about it" required>
+            <label>Do you require a VISA to enter Egypt?</label>
+            <select name="visa">
+              <option value="" selected>------</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <!-- Add more options as needed -->
+              </select>
           </div>
           <div class="input-field">
-            <label>What experiences are you looking to gain from this conference?</label>
-            <input type="text" name="experiences" placeholder="Tell us about it" required>
+            <label>What type of VISA you need to enter Egypt?</label>
+            <select name="visa_type">
+              <option value="" selected>------</option>
+              <option value="Visa on Arrival">Visa on Arrival</option>
+              <option value="I need to apply for Visa">I need to apply for Visa</option>
+              <option value="I am not sure">I am not sure</option>
+              <option value="I don't need Visa">I don't need Visa</option>
+
+              <!-- Add more options as needed -->
+              </select>
           </div>
           <div class="input-field">
-            <label>What are you expecting from MEAS'24 Egypt?</label>
-            <input type="text" name="expectations" placeholder="Tell us about it" required>
+            <label>Would you like to be provided assistance regarding Visa?</label>
+            <select name="assistance">
+              <option value="" selected>------</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <!-- Add more options as needed -->
+              </select>
           </div>
+          <div class="input-field">
+            <label>Do you need an invitation letter from AIESEC in Egypt?</label>
+            <select name="invitation">
+              <option value="" selected>------</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <!-- Add more options as needed -->
+              </select>
+          </div>
+          <div class="input-field">
+            <label>Do you have a valid international passport?</label>
+            <select name="passport">
+              <option value="" selected>------</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <!-- Add more options as needed -->
+              </select>
+          </div>
+          <div class="input-field">
+            <label>Passport Number</label>
+            <input type="text" name="passport_number" placeholder="ex: A123XXXX" required>
+          </div>
+          <div class="input-field">
+            <label>Passport Issue Date</label>
+            <input type="date" name="issue" placeholder="ex: 01/02/2020" required>
+          </div>
+          <div class="input-field">
+            <label>Passport Expiry Date</label>
+            <input type="date" name="expiry" placeholder="ex: 01/02/2026" required>
+          </div>
+          <div class="input-field">
+            <label>Place of Birth</label>
+            <input type="text" name="place" placeholder="ex: Cairo" required>
+          </div>
+          <div class="input-field">
+            <label>Expected Arrival Time</label>
+            <input type="date" name="arrival" placeholder="ex: 01/11/2024" required>
+          </div>
+          <div class="input-field">
+            <label>Expected Leaving Time</label>
+            <input type="date" name="leaving" placeholder="ex: 25/11/2024" required>
+          </div>
+          <div>
+            <label for="formFileLg" class="input-field1">Upload Information page of your Passport</label>
+            <input class="form-control form-control-lg" id="image" name="passport_image" type="file">
+          </div>
+        </div>
+        <div class="button-container">
+          <input class="previous-btn" type="button" value="Previous" onclick="showPage(1)">
+          <button class="next-btn" type="button" id="nextButton1" onclick="validateStep2()">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 2: AIESEC Details -->
+      <div class="page3 page" id="step3" style="display: none;">
+        <h2>Delegate Experience</h2>
+        <div class="input-fields">
           <div class="input-field">
             <label>Do you have any kind of allergies or food preferences?</label>
             <select name="allergies">
@@ -238,10 +320,81 @@
               <!-- Add more options as needed -->
               </select>
           </div>
+          <div class="input-field">
+            <label>Do you have any particular condition or any different occasion it can occur?</label>
+            <input type="text" name="condition" placeholder="Tell us about it" required>
+          </div>
+          <div class="input-field">
+            <label>What is your main motivation to be part of MEAS'24 Egypt?</label>
+            <input type="text" name="motivation" placeholder="Tell us about it" required>
+          </div>
+          <div class="input-field">
+            <label>What unique events would you like to see at MEAS'24 Egypt?</label>
+            <input type="text" name="unique_events" placeholder="ex: Global Village, Egyptian Night, etc" required>
+          </div>
+          <div class="input-field">
+            <label>What experiences are you looking to gain from this conference?</label>
+            <input type="text" name="experiences" placeholder="Tell us about it" required>
+          </div>
+          <div class="input-field">
+            <label>What are you expecting from MEAS'24 Egypt?</label>
+            <input type="text" name="expectations" placeholder="Tell us about it" required>
+          </div>
+          <div class="input-field">
+            <label>What are your expectations regarding the FACI Team?</label>
+            <input type="text" name="expectations_faci" placeholder="Tell us about it" required>
+          </div>
+          <div class="input-field">
+            <label>What are your expectations regarding the CC Team?</label>
+            <input type="text" name="expectations_cc" placeholder="Tell us about it" required>
+          </div>
+        <div class="form-check form-switch custom-checkbox">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" required>
+          <label class="form-check-label" for="flexSwitchCheckDefault">I understand and accept the <a style="text-decoration:underline" id="sexualLink"> Anti-Sexual Harassment Policy</a></label>
         </div>
+        <div class="form-check form-switch custom-checkbox">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault1" required>
+          <label class="form-check-label" for="flexSwitchCheckDefault1">I understand and accept the <span style="text-decoration:underline" id="subtanceLink"> Anti - Substance Abuse Policy</span></label>
+        </div>
+      </div>
+
         <div class="button-container">
-          <input class="previous-btn" type="button" value="Previous" onclick="showPage(1)">
-          <input class="submit-btn" type="submit" value="Submit" onclick="validateStep2()">
+          <input class="previous-btn" type="button" value="Previous" onclick="showPage(2)">
+          <input class="submit-btn" type="submit" value="Submit" onclick="validateStep3()">
+        </div>
+        <div id="privacyModal" class="modal">
+          <div id = "modal-content" class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Anti - Sexual Harassment Policy</h2>
+            <p>
+              🚨 In AIESEC, one of our values is demonstrating integrity. We, the Conference Committee and MC Egypt, try to live up to these values at all times and expect you to do the same. To avoid unwanted situations in this conference, we kindly ask you to read through the following policy, that aims to prevent sexual harassment situations during the event, and sign at the bottom to show you are aware and will not engage in these behaviors.
+              <br>
+              🚨Sexual Harassment is any conduct of a sexual nature, whether verbal or physical, with the purpose of infringing or that infringes on the dignity of a person, particularly when it generates an intimidating, derogatory or offensive environment.
+              <br>
+              🚨Sexual harassment is distinguished from freely accepted and reciprocal advances to the extent that sexual harassment is unwanted by the person object of said advances. As an example, and without excluding or limiting other aspects, the types of conduct described below could be considered sexual harassment.
+              <br>
+              🚨 Conduct understood as sexual harassment:
+              • Verbal conduct is unwelcome sexual insinuations, propositions, or pressure to enter sexual intercourse, insistence to take part in social activities outside the workplace once an individual has clearly stated that the said insistence is inappropriate and unwarranted; offensive flirting; insinuating, indirect or obscene comments; unwanted telephone calls; jokes or comments on a person’s sexual appearance.
+              • Non-verbal conduct is exhibition of sexually suggestive or pornographic photographs, of objects or texts, indecent looks, whistles, or gestures; offensive letters or e-mail messages with sexual content.
+              • Physical conduct is deliberate and unwanted physical contact, unwanted hugs or kisses, excessive and unnecessary physical nearness.
+              <br>
+              
+              🚨Two types of sexual harassment can be distinguished based on whether the above indicated behavior implies an element of coercion or not:
+              — “Quid pro quo” Harassment: This consists of forcing the victim to choose between accepting sexual advances or losing/seeing reduced work benefits or conditions that affect that person’s access to professional training, employment, promotion, salary or any other decision connected with these issues. As this behavior implies abuse of authority, the individual involved will have the power, whether directly or indirectly, to provide or refuse certain work benefits or situations.
+              — Environmental harassment: The subject involved in the harassment creates a work environment that is intimidating, hostile, derogatory, humiliating or offensive for the victim, due to unwelcome attitudes and behavior of a sexual nature. This may involve any stakeholders involved with AIESEC, including employees of the organizations that we work with, host family, etc., regardless of their position or status, or third persons with access to the organization.
+            </p>
+          </div>
+          <div id="modal-content1" class="modal-content1">
+            <span id="close" class="close">&times;</span>
+            <h2>Anti - Substance Abuse Policy</h2>
+            <p>
+              🚨The Conference Committee and MC Egypt are committed to protecting the safety, health, and well-being of its members and all people who are involved in its conferences, and/or use its products and services. Recognizing that drug and alcohol abuse pose a direct and significant threat to this goal, the Conference Committee and MC Egypt wants to ensure a working environment free from substance abuse for all its members. The Conference Committee and MC Egypt therefore strictly prohibits the illicit use, possession, sale, conveyance, distribution, or manufacture of illegal drugs, intoxicants, or controlled substances in Egypt. In addition, the Conference Committee and MC Egypt strictly prohibits the abuse of alcohol or drugs.
+              <br>
+              🚨The consumption of substances should be based on the country’s law and guidelines that will be downscaled by the CC, as well as the individual’s capacity to endure.
+              <br>
+              🚨 Any violation of this policy will result in adverse action up to and including removal from the venue and conference.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -283,6 +436,29 @@
         countryCodeInput.value = phoneInput.getSelectedCountryData().dialCode;
       });
    
+
+      
+    </script>
+
+
+    <script>
+      const phoneInputField1 = document.querySelector("#emergency");
+      const countryCodeInput1 = document.querySelector("#country_code1");
+      
+      const phoneInput1 = window.intlTelInput(phoneInputField1, {
+        initialCountry: "eg",  // Set Egypt as the default country
+        preferredCountries: ["eg"], // Prioritize Egypt at the top
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        autoFormat: true, // Enable automatic formatting
+        onlyCountries: true, // Restrict to valid countries
+      });
+      
+      phoneInputField.addEventListener("change", function () {
+        countryCodeInput1.value = phoneInput.getSelectedCountryData().dialCode;
+      });
+   
+
+      
     </script>
 
   <script>
@@ -296,83 +472,9 @@
       });
   </script>
 
-  <script>
-    // Function to show the next page
-  function showPage(step) {
-    // Hide all pages
-    document.querySelectorAll('.page').forEach(page => {
-      page.style.display = 'none';
-    });
-    // Show the page for the current step
-    document.getElementById('step' + step).style.display = 'block';
-  }
 
-  // Validate Step 1 (Personal Details) before moving to Step 2
-    // Function to show the next or previous page
-    function showPage(step) {
-      // Hide all pages
-      document.querySelectorAll('.page').forEach(page => {
-        page.style.display = 'none';
-      });
-      // Show the page for the current step
-      document.getElementById('step' + step).style.display = 'block';
-    }
   
-    // Validate Step 1 (Personal Details) before moving to Step 2
-    function validateStep1() {
-      const step1Inputs = document.querySelectorAll('#step1 input');
-      let isValid = true;
-  
-      // Check if all fields in Step 1 are filled
-      step1Inputs.forEach(input => {
-        if (!input.value.trim()) {
-          isValid = false;
-          input.classList.add('error'); // Highlight empty fields with error class
-        } else {
-          input.classList.remove('error'); // Remove error class from filled fields
-        }
-      });
-  
-      return isValid;
-    }
-  
-    // Validate Step 2 (AIESEC Details) before submitting the form
-    function validateStep2(event) {
-      const step2Inputs = document.querySelectorAll('#step2 input');
-      let isValid = true;
-  
-      // Check if all fields in Step 2 are filled
-      step2Inputs.forEach(input => {
-        if (!input.value.trim()) {
-          isValid = false;
-          input.classList.add('error'); // Highlight empty fields with error class
-        } else {
-          input.classList.remove('error'); // Remove error class from filled fields
-        }
-      });
-  
-      if (!isValid) {
-        event.preventDefault();  // Prevent form submission if validation fails
-      }
-    }
-  
-    // Attach event listeners on buttons
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initially show Step 1
-      showPage(1);
-  
-      // Validate Step 1 before moving to Step 2
-      document.getElementById('nextButton').addEventListener('click', function() {
-        if (validateStep1()) {
-          showPage(2);  // Move to Step 2 only if Step 1 is valid
-        }
-      });
-  
-      // Validate Step 2 on form submission
-      document.querySelector('.reg-form').addEventListener('submit', validateStep2);
-    });
-  
-  </script>
+
   
 </body>
 

@@ -11,24 +11,43 @@ class UserRegistrationType(DjangoObjectType):
         created_at = graphene.DateTime()
 
 class UserRegistrationInput(graphene.InputObjectType):
+
     first_name = graphene.String(required=True)
     last_name = graphene.String(required=True)
+    nickname = graphene.String(required=True)  # Added nickname as required
     gender = graphene.String(required=True)
-    PersonalEmail = graphene.String(required=True)
-    phone_number = graphene.String(required=True)
+    whatsapp_number = graphene.String(required=True)
     telegram_username = graphene.String(required=True)
     country = graphene.String(required=True)
     nationality = graphene.String(required=True)
-    AiesecEmail = graphene.String(required=True)
-    Position = graphene.String(required=True)
+    aiesec_mail = graphene.String(required=True)
+    position = graphene.String(required=True)
     dob = graphene.Date(required=True)
     motivation = graphene.String(required=True)
     unique_events = graphene.String(required=True)
     experiences = graphene.String(required=True)
     expectations = graphene.String(required=True)
-    allergies = graphene.String(required=True)
-    image = Upload(required=True)  # Use Upload for image file uploads
+    allergies = graphene.String(required=True)  # Update with actual field type if using choices
+    image = Upload(required=True)
     entity = graphene.String(required=True)
+    emergency = graphene.String(required=True)
+    country_code1 = graphene.String(required=True)  # Added country_code1 as required
+    visa = graphene.String(required=True)
+    visa_type = graphene.String(required=True)
+    assistance = graphene.String(required=True)
+    invitation = graphene.String(required=True)
+    passport = graphene.String(required=True)
+    passport_number = graphene.String(required=True)
+    issue = graphene.Date(required=True)
+    expiry = graphene.Date(required=True)
+    arrival = graphene.Date(required=True)
+    leaving = graphene.Date(required=True)
+    place = graphene.String(required=True)
+    passport_image = Upload(required=True)
+    condition = graphene.String(required=True)
+    expecations_faci = graphene.String(required=True)
+    expecations_cc = graphene.String(required=True)
+
 
 
 class RegistrationMutation(graphene.Mutation):
@@ -39,37 +58,57 @@ class RegistrationMutation(graphene.Mutation):
 
     def mutate(self, info, input):
         # Save the uploaded image file
-        image_file = input.image  # `image_file` will be the uploaded file
+        passport1 = input.passport_image;  # `image_file` will be the uploaded file
+        image_file = input.image;  # `image_file` will be the uploaded file
 
         # Create a new UserRegistration object with the provided data
         user = UserRegistration(
-            
             first_name=input.first_name,
             last_name=input.last_name,
+            nickname=input.nickname,  # Assuming nickname is present in input
             gender=input.gender,
-            PersonalEmail=input.PersonalEmail,
-            phone_number=input.phone_number,
+            whatsapp_number=input.phone_number,  # Assuming phone_number is whatsapp number
             telegram_username=input.telegram_username,
             country=input.country,
             nationality=input.nationality,
-            AiesecEmail=input.AiesecEmail,
-            Position=input.Position,
-            dob=input.dob,
-            entity =input.entity,
+            aiesec_mail=input.AiesecEmail,  # Use lowercase for consistency
+            position=input.Position,
+            dob=input.dob,  # Assuming dob format
+            entity=input.entity,
             motivation=input.motivation,
             unique_events=input.unique_events,
             experiences=input.experiences,
             expectations=input.expectations,
             allergies=input.allergies,
-            image=image_file.name  # Store the image filename or handle it as needed
+            # Handle image (adapt based on your image storage mechanism)
+            image=image_file.name,  # Example, adjust for your storage logic
+            passport_image= passport1.name,
+            country_code=input.country_code,  # Assuming country_code1 should be country_code
+            country_code1=input.country_code1,  # Assuming country_code1 should be country_code
+            visa=input.visa,
+            visa_type=input.visa_type,
+            assistance=input.assistance,
+            invitation=input.invitation,
+            passport=input.passport,
+            passport_number=input.passport_number,
+            issue=input.issue,  # Assuming issue format
+            expiry=input.expiry,  # Assuming expiry format
+            arrival=input.arrival,  # Assuming arrival format
+            leaving=input.leaving,  # Assuming leaving format
+            place=input.place,
+            condition=input.condition,
+            expecations_faci=input.expecations_faci,
+            expecations_cc=input.expecations_cc,
         )
         user.save()
 
         # Save the file if you want to handle it manually
-        with open(f'media/uploads/{image_file.name}', 'wb') as f:
+        with open(f'media/uploads/personal/{image_file.name}', 'wb') as f:
             for chunk in image_file.chunks():
                 f.write(chunk)
-
+        with open(f'media/uploads/passport/{passport1.name}', 'wb') as f:
+            for chunk in passport1.chunks():
+                f.write(chunk)
         return RegistrationMutation(user=user)
 
 class Mutation(graphene.ObjectType):
@@ -86,9 +125,20 @@ class Query(graphene.ObjectType):
         start_index = (page - 1) * per_page
         end_index = start_index + per_page
 
-        if date_from is not None:
-            return UserRegistration.objects.filter(created_at__range=(date_from, datetime.datetime.now()))[start_index:end_index]
-        else:
-            return UserRegistration.objects.all()[start_index:end_index]
+        try:
+            # Use filter and order for better performance
+            if date_from is not None:
+                users = UserRegistration.objects.order_by('created_at').filter(created_at__range=(date_from, datetime.datetime.now()))[start_index:end_index]
+            else:
+                users = UserRegistration.objects.order_by('created_at').all()[start_index:end_index]
+        except ValueError as e:
+            # Handle invalid date format
+            print(f"Invalid date format: {e}")
+            return None
+
+        # Consider fetching total count for pagination UI
+        # total_count = UserRegistration.objects.filter(...).count()
+
+        return users
 
 schema = graphene.Schema(query=Query, mutation=Mutation)
