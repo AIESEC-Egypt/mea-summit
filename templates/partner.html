@@ -137,7 +137,23 @@
 
   <!-- Include JavaScript Files -->
 
-
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('nav123');
+      const navbarBackgroundColor = '#b5163c'; // Replace with your desired color
+      const fadeDuration = 500; // Adjust the fade duration in milliseconds
+    
+      if (window.scrollY >= 700) {
+        // Fade in the background color
+        navbar.style.transition = `background-color ${fadeDuration}ms ease-in-out`;
+        navbar.style.backgroundColor = navbarBackgroundColor;
+      } else {
+        // Fade out the background color
+        navbar.style.transition = `background-color ${fadeDuration}ms ease-in-out`;
+        navbar.style.backgroundColor = 'transparent';
+      }
+    });
+  </script>
 
   
 </body>

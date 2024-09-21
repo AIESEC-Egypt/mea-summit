@@ -36,7 +36,6 @@ body{
 /* Navbar Styles */
 .navbar {
   padding: 1rem 2rem;
-  background-color: transparent !important;
   /* Semi-transparent background */
   position: fixed;
   top: 0;
