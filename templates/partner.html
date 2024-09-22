@@ -70,11 +70,11 @@
         <div class="input-fields">
           <div class="input-field">
             <label>Company Name</label>
-            <input type="text" name="company_name" required>
+            <input type="text" name="company_name" placeholder="ex: Strategico" required>
           </div>
           <div class="input-field">
             <label>Company Field</label>
-            <input type="text" name="company_field" required>
+            <input type="text" name="company_field" placeholder="ex: Business Consultancy" required>
           </div>
           <div class="input-field">
             <label>Company Size</label>
@@ -92,31 +92,32 @@
               </select></div>
           <div class="input-field">
             <label>Company LinkedIn Profile</label>
-            <input type="url" name="linkedin" required>
+            <input type="url" name="linkedin" placeholder="ex: https://www.linkedin.com/company/strategico" required>
           </div>
           <div class="input-field">
             <label>Company Website</label>
-            <input type="url" name="company_website" required>
+            <input type="url" name="company_website" placeholder="If you don't have a website, Leave it empty">
           </div>
           <div class="input-field">
             <label>Why your company is interested in partnering with AIESEC MEA Summit 2024?</label>
-            <input type="text" name="why" required>
+            <input type="text" name="why" placeholder="Let us know more" required>
           </div>
           <div class="input-field">
             <label>Contact Person Name</label>
-            <input type="text" name="contact_name" required>
+            <input type="text" name="contact_name" placeholder="ex: Mark Jose"required>
           </div>
           <div class="input-field">
             <label>Contact Person Email</label>
-            <input type="email" name="contact_mail" required>
+            <input type="email" name="contact_mail" placeholder="example@gmail.com" required>
           </div>
           <div class="input-field">
             <label>Contact Person Mobile Number</label>
-            <input type="text" name="contact_phone" required>
+            <input type="tel" name="contact_phone" id="contact_phone" placeholder="ex: 12XXXXXXXX" required>
+            <input type="hidden" name="country_code2" id="country_code2" required>
           </div>
           <div class="input-field">
             <label>Contact Person Position in the organization</label>
-            <input type="text" name="contact_position" required>
+            <input type="text" name="contact_position" placeholder="Business Development Manager" required>
           </div>
          
         <div class="button-container">
@@ -188,3 +189,29 @@
 </script>
 <script src = "{%static 'js/bootstrap.bundle.min.js'%}"></script>
 
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/countdown.js' %}"></script>
+<script src="{% static 'js/form.js' %}"></script>
+<script src = "{%static 'js/bootstrap.bundle.min.js'%}"></script>
+<script src = "{%static 'js/intlTelInput.min.js'%}"></script>
+
+
+  <script>
+    const phoneInputField = document.querySelector("#contact_phone");
+    const countryCodeInput = document.querySelector("#country_code2");
+    
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      initialCountry: "eg",  // Set Egypt as the default country
+      preferredCountries: ["eg"], // Prioritize Egypt at the top
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      autoFormat: true, // Enable automatic formatting
+      onlyCountries: true, // Restrict to valid countries
+    });
+    
+    phoneInputField.addEventListener("change", function () {
+      countryCodeInput.value = phoneInput.getSelectedCountryData().dialCode;
+    });
+ 
+
+    
+  </script>
