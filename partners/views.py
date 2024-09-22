@@ -8,6 +8,8 @@ def partners(request):
             partners_instance = form.save(commit=False)
             partners_instance.save()
             form.save_m2m()
+            return redirect('/thankyou.html')  # Assuming you have a URL named 'thankyou'
+
     else:
         form = PartnerForm()
 
