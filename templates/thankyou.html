@@ -18,6 +18,9 @@
     </head>
 
 <body>
+  <div class="pre-loader">
+    <img style="width:120px" src="{% static 'Images/eye.gif' %}" alt="">
+  </div>
   <header>
     <div class="nav">
       <nav class="navbar navbar-expand-lg">
@@ -97,6 +100,10 @@
     
   });
 
+  window.onload = function () {
+    //hide the preloader
+    document.querySelector(".pre-loader").style.display = "none";
+  };
 </script>
 <script src = "{%static 'js/bootstrap.bundle.min.js'%}"></script>
 

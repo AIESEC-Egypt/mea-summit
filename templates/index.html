@@ -71,7 +71,9 @@
 
 <!-- home sec-->
 <body>
-
+  <div class="pre-loader">
+    <img style="width:120px" src="{% static 'Images/eye.gif' %}" alt="">
+  </div>
   <div class="home">
     <div class="home-content">
         <h1 id="animated-text" class="text-generate">MEA SUMMIT</h1>
@@ -332,6 +334,10 @@ toggleButton.addEventListener('click', () => {
   
 });
 
+window.onload = function () {
+  //hide the preloader
+  document.querySelector(".pre-loader").style.display = "none";
+};
 
 </script>
 <script src="{%static 'js/aos.js'%}"></script>
