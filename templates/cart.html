@@ -1,0 +1,267 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'js/bootstrap.bundle.min.js' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=New+Amsterdam&display=swap" rel="stylesheet">
+        <link href="{%static 'vendors/aos/aos.css'%}" rel="stylesheet">
+        <title>MEA Summit</title>
+        <link rel="icon" href="{% static 'Images/logo1.png' %}" type="image/x-icon">
+    </head>
+    <header>
+      <div class="nav">
+        <nav class="navbar navbar-expand-lg" id="nav123" style = "background-color:transparent">
+            <div class="container-fluid">
+                               <a class="navbar-brand" href="/">
+                    <img href="index.html" src="{% static 'Images/logorpm.png' %}" alt="Logo" style="width: 150px;"> <!-- Adjust the size as needed -->
+                </a>
+                <button class="navbar-toggler" id = "b1" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="sidebarMenu" style>
+                  <div class="sidebar-header" >
+                    <a class="navbar-brand" href="/">
+                        <img src="{% static 'Images/logorpm.png' %}" alt="Logo" style="width: 200px; margin-left: auto;margin-bottom: 30px;margin-right: auto;"> <!-- Adjust the size as needed -->
+                    </a>
+                </div>
+                    <ul class="navbar-nav ms-auto"> <!-- Aligning to the right -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/registration.html">Register Now</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/partner.html">Partner With Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      </div>
+    
+    </header>
+
+<!--
+        <div class="header">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href=""> 
+                    <img class="logo" src="{% static 'Images/logo.png' %}" alt="">
+                  </a>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Register Now</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Prtner With Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Aboute Egypt</a>
+                      </li>
+                    </form>
+                  </div>
+                </div>
+              </nav> 
+!-->
+
+<!-- home sec-->
+<body>
+  <div class="pre-loader">
+    <img style="width:120px" src="{% static 'Images/eye.gif' %}" alt="">
+  </div>
+  <div class="home">
+    <div class="home-content">
+        <h1 id="animated-text" class="text-generate">MEA SUMMIT</h1>
+        <h2 class="spaced-text">E G Y P T   2 0 2 4</h2>
+      </div>
+  </div>
+  
+<!-- end home sec-->
+<!-- about-->
+
+  <div class="products-container">
+      <div class="product-item">
+          <img src="{%static 'Images/event_2.jpg'%}" alt="Product 1">
+          <h3>Product 1</h3>
+          <p>Description of Product 1</p>
+          <p>Price: $19.99</p>
+      </div>
+      <div class="product-item">
+        <img src="{%static 'Images/event_2.jpg'%}" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Description of Product 1</p>
+        <p>Price: $19.99</p>
+    </div>
+    <div class="product-item">
+      <img src="{%static 'Images/event_2.jpg'%}" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>Description of Product 1</p>
+      <p>Price: $19.99</p>
+  </div>
+  <div class="product-item">
+    <img src="{%static 'Images/slider.section/slider.1.webp'%}" alt="Product 1">
+    <h3>Product 1</h3>
+    <p>Description of Product 1</p>
+    <p>Price: $19.99</p>
+</div>
+  </div>
+
+        <footer>
+          <div class="container">
+
+            <img src="{% static 'Images/footer1.png' %}" alt="">
+            <div class="text">
+              <p>2024 &copy; courtesy of AIESEC in Egypt</p>
+              <p>Developed by <a href="https://instagram.com/im_egypt" target="_blank" style="color:white"> <span> IM Egypt</span></a></p>
+            </div>
+          </div>
+        </footer>
+
+        <script>
+          window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('nav123');
+            const navbarBackgroundColor = '#b5163c'; // Replace with your desired color
+            const fadeDuration = 500; // Adjust the fade duration in milliseconds
+          
+            if (window.scrollY >= 700) {
+              // Fade in the background color
+              navbar.style.transition = `background-color ${fadeDuration}ms ease-in-out`;
+              navbar.style.backgroundColor = navbarBackgroundColor;
+            } else {
+              // Fade out the background color
+              navbar.style.transition = `background-color ${fadeDuration}ms ease-in-out`;
+              navbar.style.backgroundColor = 'transparent';
+            }
+          });
+        </script>
+    </body>
+</html>
+
+<script src = "{%static 'js/bootstrap.bundle.min.js'%}">
+</script>
+<script>
+
+  const inputField = document.getElementById('singleField');
+  const displayDiv = document.getElementById('display');
+  const displayNameDiv = document.getElementById('name-display');
+  const alphabet = {
+    "a": "{% static 'Images/heiroglyphics/a.png' %}",
+    "b": "{% static 'Images/heiroglyphics/b.png' %}",
+    "c": "{% static 'Images/heiroglyphics/c.png' %}",
+    "d": "{% static 'Images/heiroglyphics/d.png' %}",
+    "e": "{% static 'Images/heiroglyphics/e.png' %}",
+    "f": "{% static 'Images/heiroglyphics/f.png' %}",
+    "g": "{% static 'Images/heiroglyphics/g.png' %}",
+    "h": "{% static 'Images/heiroglyphics/h.png' %}",
+    "i": "{% static 'Images/heiroglyphics/i.png' %}",
+    "j": "{% static 'Images/heiroglyphics/j.png' %}",
+    "k": "{% static 'Images/heiroglyphics/k.png' %}",
+    "l": "{% static 'Images/heiroglyphics/l.png' %}",
+    "m": "{% static 'Images/heiroglyphics/m.png' %}",
+    "n": "{% static 'Images/heiroglyphics/n.png' %}",
+    "o": "{% static 'Images/heiroglyphics/o.png' %}",
+    "p": "{% static 'Images/heiroglyphics/p.png' %}",
+    "q": "{% static 'Images/heiroglyphics/q.png' %}",
+    "r": "{% static 'Images/heiroglyphics/r.png' %}",
+    "s": "{% static 'Images/heiroglyphics/s.png' %}",
+    "t": "{% static 'Images/heiroglyphics/t.png' %}",
+    "u": "{% static 'Images/heiroglyphics/u.png' %}",
+    "v": "{% static 'Images/heiroglyphics/v.png' %}",
+    "w": "{% static 'Images/heiroglyphics/w.png' %}",
+    "x": "{% static 'Images/heiroglyphics/x.png' %}",
+    "y": "{% static 'Images/heiroglyphics/y.png' %}",
+    "z": "{% static 'Images/heiroglyphics/z.png' %}",
+    "ch": "{% static 'Images/heiroglyphics/ch.png' %}",
+    "sh": "{% static 'Images/heiroglyphics/sh.png' %}"
+  }
+  inputField.addEventListener('input', function(event) {
+    const inputValue = event.target.value;
+     let imageDiv = '';
+     for (let i = 0; i < inputValue.length; i++) {
+       let char = inputValue[i].toLowerCase();
+       if(i + 1 < inputValue.length && inputValue[i + 1].toLowerCase() == 'h'){
+         if(char == 'c'){char = 'ch';i++}
+         else if(char == 's'){char = 'sh';i++}
+       }
+       if(char == ' ')continue;
+       let imageUrl = alphabet[char];
+       console.log(imageUrl)
+       imageDiv += `<img class="hieroglyph" src="${imageUrl}" />`;
+      }
+     displayDiv.innerHTML = imageDiv;
+     displayNameDiv.innerHTML = inputValue;
+ });
+
+
+
+</script>
+<script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const textElement = document.getElementById('animated-text');
+    const finalText = textElement.textContent; // The final text to display
+
+    // Add the "text-generate" class to the text element
+    textElement.classList.add('text-generate');
+
+    // Function to generate random characters
+    const getRandomChar = () => String.fromCharCode(Math.floor(Math.random() * 26) + 65); // A-Z
+
+    // Function to create random letters animation
+    const animateText = () => {
+        const textLength = finalText.length;
+        const intervalTime = 50; // Time between character changes
+        const totalTime = 750; // Total time for animation in milliseconds
+        const iterations = totalTime / intervalTime;
+        let count = 0;
+
+        // Create an array of random characters
+        const randomText = Array.from({ length: textLength }, () => getRandomChar()).join('');
+        textElement.textContent = randomText;
+
+        const interval = setInterval(() => {
+            if (count < iterations) {
+                // Display random characters
+                textElement.textContent = Array.from({ length: textLength }, () => getRandomChar()).join('');
+                count++;
+            } else {
+                clearInterval(interval);
+                // Set final text
+                textElement.textContent = finalText;
+            }
+        }, intervalTime);
+    };
+
+    animateText();
+});
+
+const sidebar = document.getElementById('sidebarMenu');
+const toggleButton = document.querySelector('.navbar-toggler');
+
+toggleButton.addEventListener('click', () => {
+  if(document.querySelector('false')){
+    sidebar.classList.toggle('show');
+    toggleButton.classList.toggle('collapsed');
+  }
+  else{
+    sidebar.classList.toggle('hide');
+    toggleButton.classList.toggle('collapsed');
+  }
+  
+  
+});
+
+window.onload = function () {
+  //hide the preloader
+  document.querySelector(".pre-loader").style.display = "none";
+};
+
+</script>
+<script src="{%static 'js/aos.js'%}"></script>
+<script>
+  AOS.init();
+</script>

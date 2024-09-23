@@ -1239,3 +1239,20 @@ background-color: #E7E6E6 !important;
 font-size: 40px !important;  
 color: #B5163C !important;
 }
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-item {
+  width: 250px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.product-item img {
+  width: 100%;
+}

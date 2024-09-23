@@ -115,7 +115,7 @@ class Mutation(graphene.ObjectType):
     create_user_registration = RegistrationMutation.Field()
 
 class Query(graphene.ObjectType):
-    all_users = graphene.List(UserRegistrationType)
+    all_leads = graphene.List(UserRegistrationType, date_from=graphene.String(), page=graphene.Int(), per_page=graphene.Int())
 
     def resolve_all_users(root, info, **kwargs):
         date_from = kwargs.get('date_from')
