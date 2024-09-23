@@ -53,7 +53,20 @@ class Mutation(graphene.ObjectType):
 
 
 class Query(graphene.ObjectType):
-    all_partners = graphene.List(PartnerRegistration)
+    all_partners = graphene.List(PartnerRegistration, date_from=graphene.String(), page=graphene.Int(), per_page=graphene.Int())
+
+    def resolve_all_partners(root, info, **kwargs):
+        date_from = kwargs.get('date_from')
+        page = kwargs.get('page', 1)
+        per_page = kwargs.get('per_page', 10)
+
+        start_index = (page - 1) * per_page
+        end_index = start_index + per_page
+
+        if date_from is not None:
+            return PartnerRegistration.objects.filter(created_at__range=(date_from, datetime.datetime.now()))[start_index:end_index]
+        else:
+            return PartnerRegistration.objects.all()[start_index:end_index]
 
 
 schema = graphene.Schema(query=Query, mutation=Mutation)
