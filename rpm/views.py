@@ -8,6 +8,8 @@ def thankyou(request):
     return render(request, 'thankyou.html')
 def cart(request):
     return render(request, 'cart.html')
+def egypt(request):
+    return render(request, 'why.html')
 def registration(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST, request.FILES)

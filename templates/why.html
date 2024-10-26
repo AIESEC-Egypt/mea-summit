@@ -1,0 +1,490 @@
+{% load static %}
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2XGL7X1WK"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W2XGL7X1WK');
+      </script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'js/bootstrap.bundle.min.js' %}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=New+Amsterdam&display=swap" rel="stylesheet">
+      <link href="{%static 'vendors/aos/aos.css'%}" rel="stylesheet">
+      <link href="{%static 'vendors/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+      <title>MEA Summit</title>
+      <link rel="icon" href="{% static 'Images/logo1.png' %}" type="image/x-icon">
+  </head>
+  <header>
+    <div class="nav">
+      <nav class="navbar navbar-expand-lg" id="nav123" style = "background-color:transparent">
+          <div class="container-fluid">
+                             <a class="navbar-brand" href="/">
+                  <img href="index.html" src="{% static 'Images/logorpm.png' %}" alt="Logo" style="width: 150px;"> <!-- Adjust the size as needed -->
+              </a>
+              <button class="navbar-toggler" id = "b1" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="sidebarMenu" style>
+                <div class="sidebar-header" >
+                  <a class="navbar-brand" href="/">
+                      <img src="{% static 'Images/logorpm.png' %}" alt="Logo" style="width: 200px; margin-left: auto;margin-bottom: 30px;margin-right: auto;"> <!-- Adjust the size as needed -->
+                  </a>
+              </div>
+                  <ul class="navbar-nav ms-auto"> <!-- Aligning to the right -->
+                      <li class="nav-item">
+                          <a class="nav-link" href="/registration.html">Register Now</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/partner.html">Partner With Us</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+    </div>
+  
+  </header>
+<body>
+    <!--home-->
+
+    <div class="pre-loader">
+      <img style="width:120px" src="{% static 'Images/eye.gif' %}" alt="">
+    </div>
+    <div class="why">
+      <div class="home-content">
+          <h1 class="reg">About Egypt</h1>
+        </div>
+    </div>
+    
+    <section class = "pattern">
+
+    <div class="section-v" data-aos="fade-up"  data-aos-duration="2000">
+        <div class="video-frame">
+        <video controls>
+            <source src="{%static 'Images/About.Egypt/This is Egypt.mp4'%}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+</div>
+
+
+    <!--CULTURE-->
+<div class="parent" >
+    <div class="child1" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" data-aos-duration="1200">
+        <h2>EGYPT CULTURE</h2>
+        <p>Egyptian culture, deeply rooted in history, centers around the life-giving Nile River, the grandeur of the pyramids, and the intricate beauty of ancient hieroglyphics. The Nile has been the heart of Egyptian civilization for millennia, providing water and fertile land that supported agriculture and trade.</p>
+    </div>
+    <div class="child2" data-aos="fade-left"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" data-aos-duration="1200">
+    
+        <div class="frame">
+            <img src="{%static 'Images/About.Egypt/OUR CULTURE.png'%}" alt="Description">
+        </div>
+
+    </div>
+</div>
+    <!--food-->
+<div class="parent" >
+    <div class="child1" data-aos="fade-left"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" data-aos-duration="1200">
+        <div class="frame">
+            <img src="{%static 'Images/About.Egypt/Food.png'%}" alt="Description">
+        </div>
+</div>
+    <div class="child2" data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" data-aos-duration="1200">
+        
+        <h2>Egyptian food</h2>
+        <p>Egyptian food reflects the country’s rich history and diverse culture. A staple dish is koshari, a hearty mix of rice, lentils, and pasta topped with tomato sauce and crispy onions. Spices like cumin and garlic enhance many meals, while street foods like falafel showcase local flavors. Sharing meals with family and friends embodies the warmth and hospitality that define Egyptian culture.</p>
+    </div>
+</div>
+    <!-- HISTORY-->
+<div class="parent">
+    <div class="child1" data-aos="fade-left"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" data-aos-duration="1200">
+        <h2>EGYPT HISTORY</h2>
+        <p>Egypt's history stretches back over 5,000 years, beginning with the unification of Upper and Lower Egypt around 3100 BCE under Pharaoh Narmer. Renowned for monumental architecture like the pyramids and the Sphinx, ancient Egyptians made significant advancements in art, writing (hieroglyphics), and religion.</p>
+    </div>
+    <div class="child2">
+
+        <div class="frame" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" data-aos-duration="1200">
+            <img src="{%static 'Images/About.Egypt/HISTORY.png'%}" alt="Description">
+        </div>
+
+     <!--   <img src="Images/About.Egypt/HISTORY.png" alt=""> -->
+    </div>
+</div>
+
+
+
+
+
+
+
+<!--Destinations Setion-->
+
+
+
+
+<div class="dest" >
+<section class="sldr">
+    <div class="vid vid1 hide-video">
+      <div class="blocker" data-id = "1"></div>
+      <div class="vid-container">
+        <button class="fas fa-play play-btn" id="myButton1" onclick="playCard(1)" data-dist = "aswan"></button>
+        <video id="video" class="openCard video1" poster="assets/images/Untitled-_1_resized.webp">
+          <source  id="mp4_1" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="vid vid2 hide-video">
+      <div class="blocker" data-id = "2"></div>
+      <div class="vid-container">
+        <button class="fas fa-play play-btn" id="myButton2" onclick="playCard(2)" data-dist = "cairo"></button>
+        <video id="video" class="openCard video2" poster="assets/images/Untitled-_1_resized.webp">
+          <source id="mp4_2" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="vid vid3 hide-video">
+      <div class="blocker" data-id = "3"></div>
+      <div class="vid-container">
+        <button class="fas fa-play play-btn" id="myButton3" onclick="playCard(3)" data-dist = "whiteDesert"></button>
+        <video id="video" class="openCard video3" poster="assets/images/Untitled-_1_resized.webp">
+          <source id="mp4_3" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="vid vid4 hide-video">
+      <div class="blocker" data-id = "4"></div>
+      <div class="vid-container">
+        <button class="fas fa-play play-btn" id="myButton4" onclick="playCard(4)" data-dist = "luxor"></button>
+        <video id="video" class="openCard video4" poster="assets/images/Untitled-_1_resized.webp">
+          <source id="mp4_4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="vid vid5 hide-video">
+      <div class="blocker" data-id = "5"></div>
+      <div class="vid-container">
+        <button class="fas fa-play play-btn" id="myButton5" onclick="playCard(5)" data-dist = "catherine"></button>
+        <video id="video" class="openCard video5" poster="assets/images/Untitled-_1_resized.webp">
+          <source id="mp4_5" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="vid vid6 hide-video">
+      <div class="blocker" data-id = "6"></div>
+      <div class="vid-container">
+        <button class="fas fa-play play-btn" id="myButton6" onclick="playCard(6)" data-dist = "marsaAlam"></button>
+        <video id="video" class="openCard video6" poster="assets/images/Untitled-_1_resized.webp">
+          <source id="mp4_6" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="vid vid7 hide-video">
+      <div class="blocker" data-id = "7"></div>
+      <div class="vid-container">
+        <button class="fas fa-play play-btn" id="myButton7" onclick="playCard(7)" data-dist = "fayoum"></button>
+        <video id="video" class="openCard video7" poster="assets/images/Untitled-_1_resized.webp">
+          <source id="mp4_7" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="vid vid8 hide-video">
+      <div class="blocker" data-id = "8"></div>
+      <div class="vid-container">
+        <button class="fas fa-play play-btn" id="myButton8" onclick="playCard(8)" data-dist = "edfu"></button>
+        <video id="video" class="openCard video8" poster="assets/images/Untitled-_1_resized.webp">
+          <source id="mp4_8" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="vid vid9 hide-video">
+      <div class="blocker" data-id = "9"></div>
+      <div class="vid-container">
+        <button class="fas fa-play play-btn" id="myButton9" onclick="playCard(9)" data-dist = "dahab"></button>
+        <video id="video" class="openCard video9" poster="assets/images/Untitled-_1_resized.webp">
+          <source id="mp4_9" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="vid vid10 hide-video">
+      <div class="blocker" data-id = "10"></div>
+      <div class="vid-container">
+        <button class="fas fa-play play-btn" id="myButton10" onclick="playCard(10)" data-dist = "pyramids"></button>
+        <video id="video" class="openCard video10" poster="assets/images/Untitled-_1_resized.webp">
+          <source id="mp4_10" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="container">
+      <h2>DESTINATIONS TO VISIT</h2>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="info">
+              <p>Aswan</p>
+              <button type="button" class="card-btn" id="aswan" data-id = "1">Watch</button>
+            </div>
+            <div class="card-shade"></div>
+            <img src="{%static 'Images/About.Egypt/aswan_0.webp'%}" alt="Aswan" />        
+          </div>
+          <div class="swiper-slide">
+            <div class="info">
+              <p>Cairo</p>
+              <button type="button" class="card-btn" id="cairo" data-id = "2" >Watch</button>
+            </div>
+            <div class="card-shade"></div>
+            <img src="{%static 'Images/About.Egypt/cairo.webp'%}" alt="Cario" />        
+          </div>
+          <div class="swiper-slide">
+            <div class="info">
+              <p>White Desert</p>
+              <button type="button" class="card-btn" id="whiteDesert" data-id = "3">Watch</button>
+            </div>
+            <div class="card-shade"></div>
+            <img src="{%static 'Images/About.Egypt/white_desert.webp'%}" alt="White Desert" />        
+          </div>
+          <div class="swiper-slide">
+            <div class="info">
+              <p>Luxor</p>
+              <button type="button" class="card-btn" id="luxor" data-id = "4">Watch</button>
+            </div>
+            <div class="card-shade"></div>
+            <img src="{%static 'Images/About.Egypt/luxor.webp'%}" alt="Luxor" />        
+          </div>
+          <div class="swiper-slide">
+            <div class="info">
+              <p>St. Catherine</p>
+              <button type="button" class="card-btn" id="catherine" data-id = "5">Watch</button>
+            </div>
+            <div class="card-shade"></div>
+            <img src="{%static 'Images/About.Egypt/st.cathrine.webp'%}" alt="St. Cathrine" />        
+          </div>
+          <div class="swiper-slide">
+            <div class="info">
+              <p>Marsa Alam</p>
+              <button type="button" class="card-btn" id="marsaAlam" data-id = "6">Watch</button>
+            </div>
+            <div class="card-shade"></div>
+            <img src="{%static 'Images/About.Egypt/marsa_alm.webp'%}" alt="Marsa Alam" />        
+          </div>
+          <div class="swiper-slide">
+            <div class="info">
+              <p>Fayoum</p>
+              <button type="button" class="card-btn" id="fayoum" data-id = "7">Watch</button>
+            </div>
+            <div class="card-shade"></div>
+            <img src="{%static 'Images/About.Egypt/Fayoum.webp'%}" alt="Fayoum" />        
+          </div>
+          <div class="swiper-slide">
+            <div class="info">
+              <p>Edfu</p>
+              <button type="button" class="card-btn" id="edfu" data-id = "8">Watch</button>
+            </div>
+            <div class="card-shade"></div>
+            <img src="{%static 'Images/About.Egypt/edfu.webp'%}" alt="Edfu" />        
+          </div>
+          <div class="swiper-slide">
+            <div class="info">
+              <p>Dahab</p>
+              <button type="button" class="card-btn" id="dahab" data-id = "9">Watch</button>
+            </div>
+            <div class="card-shade"></div>
+            <img src="{%static 'Images/About.Egypt/dahab-asalah-coast.webp'%}" alt="Dahab" />        
+          </div>
+          <div class="swiper-slide">
+            <div class="info">
+              <p>Pyramids</p>
+              <button type="button" class="card-btn" id="pyramids" data-id = "10">Watch</button>
+            </div>
+            <div class="card-shade"></div>
+            <img src="{%static 'Images/About.Egypt/pyramids.webp'%}" alt="Pyramids" />        
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ </div>
+
+</section>
+ <footer>
+  <div class="container">
+
+    <img src="{% static 'Images/footer1.png' %}" alt="">
+    <div class="text">
+      <p>2024 &copy; courtesy of AIESEC in Egypt</p>
+      <p>Developed by <a href="https://instagram.com/im_egypt" target="_blank" style="color:white"> <span> IM Egypt</span></a></p>
+    </div>
+  </div>
+</footer>
+
+<script src = "{%static 'js/bootstrap.bundle.min.js'%}">
+</script>
+<script>
+  const sidebar = document.getElementById('sidebarMenu');
+  const toggleButton = document.querySelector('.navbar-toggler');
+  
+  toggleButton.addEventListener('click', () => {
+    if(document.querySelector('false')){
+      sidebar.classList.toggle('show');
+      toggleButton.classList.toggle('collapsed');
+    }
+    else{
+      sidebar.classList.toggle('hide');
+      toggleButton.classList.toggle('collapsed');
+    }
+    
+    
+  });
+  
+  window.onload = function () {
+    //hide the preloader
+    document.querySelector(".pre-loader").style.display = "none";
+  };
+  
+  </script>
+  <script src="{%static 'js/aos.js'%}"></script>
+  
+  <script src="{%static 'js/script.js'%}"></script>
+
+  <script src="{%static 'vendors/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('nav123');
+      const navbarBackgroundColor = '#b5163c'; // Replace with your desired color
+      const fadeDuration = 500; // Adjust the fade duration in milliseconds
+    
+      if (window.scrollY >= 700) {
+        // Fade in the background color
+        navbar.style.transition = `background-color ${fadeDuration}ms ease-in-out`;
+        navbar.style.backgroundColor = navbarBackgroundColor;
+      } else {
+        // Fade out the background color
+        navbar.style.transition = `background-color ${fadeDuration}ms ease-in-out`;
+        navbar.style.backgroundColor = 'transparent';
+      }
+
+
+      });
+      
+    if(window.screen.width > 767){
+      const why = document.querySelectorAll(".why");
+      why.forEach(el => {
+        el.classList.remove('hide-video')
+      })
+    }
+    const parallax_el = document.querySelectorAll(".parallax");
+
+    let xValue = 0, yValue = 0;
+    function update(){
+      parallax_el.forEach(el => {
+        let speedx = el.dataset.speedx;
+        let speedy = el.dataset.speedy;
+        el.style.transform = `translateX(calc(-50% + ${-xValue * speedx}px)) translateY(calc(-50% + ${yValue * speedy}px))`;
+      })
+    }
+
+    update();
+    if(window.screen.width > 767){
+        window.addEventListener("mousemove", (e) => {
+          if(timeline1.isActive()){return}
+
+          xValue = e.clientX - window.innerWidth / 2;
+          yValue = e.clientY - window.innerHeight / 2;
+
+          update();
+      })
+    }
+
+    if(window.screen.width <= 767){
+      const text = document.querySelector('.text');
+      window.addEventListener('scroll', () => {
+          parallax_el.forEach(el => {
+            let speedy = el.dataset.speedy;
+            yValue = -window.scrollY - window.innerHeight / 2;
+            update();
+          })
+      })
+    }
+
+
+    // GSAP Animation
+    let timeline1 = gsap.timeline();
+
+    timeline1.from(".text", {
+      top: `90%`,
+      duration: 2,
+    })
+  </script>
+    <script>
+    // slider 
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: "1",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 4,
+        slideShadows: false
+      },
+      keyboard: {
+        enabled: true
+      },
+      mousewheel: {
+        thresholdDelta: 70
+      },
+      initialSlide: 0,
+      on: {
+        click(event) {
+          swiper.slideTo(this.clickedIndex);
+        }
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2
+        }
+      }
+    });
+
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  
+
+
+
+
+
+</body>      
+</html>
+
+
+

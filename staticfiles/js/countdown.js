@@ -22,7 +22,7 @@ function startCountdown() {
     // If the countdown is over, display a message
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("countdown").innerHTML = "EXPIRED";
+      document.getElementById("countdown").innerHTML = "REGISTRATION IS CLOSED!";
     }
   }, 1000);
 }

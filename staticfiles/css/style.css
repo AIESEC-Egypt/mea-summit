@@ -487,6 +487,10 @@ h2 {
   font-family: New Amsterdam;
   font-weight: lighter;
   text-align: center;
+  color: white;
+  font-size: 64px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .dm-serif-display-regular {
@@ -1711,5 +1715,264 @@ table.order-details tbody td {
 }
 
 
+/* why EGYPT style*/
+.why {
+
+  font-family: "New Amsterdam", sans-serif;
+  background-color: #b5163c;
+  background-image: url("../Images/About.Egypt/cover.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-v{
+ /* opacity: 0.5;*/
+  background-size: cover;
+  align-items: center !important;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 60px;
+}
+.video-frame {
+  background-color: #B5163C;
+  background-size: cover;
+  width: 450px;
+  align-items: center;
+  border: 5px solid #FAB90B; 
+  padding: 10px; 
+  border-radius: 8px; 
+  box-shadow: 0 0 10px #FAB90B(0, 0, 0, 0.5);
+}
+video {
+  display: block; 
+  width: 100%; 
+  border-radius: 4px;
+}
+
+.home-egypt h1{
+  font-size: 40vh; 
+  margin: 0;
+  text-align: center;
+}
+.parent{
+  width: 100%;
 
 
+  background-size: cover;
+  justify-content:center ;
+  align-items: center;
+  display: flex;
+  padding: 20px;
+}
+.parent h2{
+  font-size: 100px;
+  color: #FAB90B;
+}
+.parent p{
+  font-size: 20px;
+  color: #FAB90B;
+}
+.child1{
+width: 50%;
+padding: 20px;
+}
+.child2{
+  padding: 20px;
+  width: 50%;
+  justify-content:center ;
+  align-items: center;
+
+}
+.child2 img{
+  padding: 20px;
+  width: 450px;
+  border-radius: 40px;
+}
+.child1 img{
+  padding: 20px;
+  width: 450px;
+  border-radius: 40px;
+
+}
+.frame {
+  border: 5px solid #FAB90B; 
+  border-radius: 30px;
+  display: inline-block;
+}
+.frame img {
+  display: block;
+}
+
+
+/*destinations*/
+
+
+.sldr {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.sldr h2 {
+  text-align: center;
+  margin-bottom: 46px;
+}
+.sldr .container {
+  position: relative;
+}
+.swiper {
+  max-width: 50%;
+  overflow: unset !important;
+  position: absolute;
+}
+@media (max-width: 980px) {
+  .swiper {
+    max-width: 75%;
+  }
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+.swiper-slide::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 100%;
+  border-radius: 15px;
+  background: linear-gradient(to bottom right, #0101018f, #0000005e);
+}
+.swiper-slide-active::after {
+  background: none;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0px 3px 17px rgb(0 0 0 / 25%);
+  border-radius: 15px;
+  aspect-ratio: calc(285 / 363);
+}
+
+@media (min-width: 768px) {
+  .swiper-slide h2 {
+    font-size: 2rem;
+  }
+  .text {
+    width: 80%;
+  }
+}
+
+.info {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  bottom: 7%;
+  z-index: 3;
+  font-size: 30px !important;
+}
+
+.info p {
+  font-size: 25px;
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.info button {
+  border-radius: 15px;
+  width: 33%;
+  border: 0;
+  background: #FAB90B;
+  color: var(--beige);
+  font-size: 20px;
+  height: 40px;
+}
+
+.card-shade {
+  position: absolute;
+  width: 101%;
+  height: 130px;
+  border-radius: 15px;
+  bottom: 0px;
+  left: -1px;
+  background: linear-gradient(transparent, #28251c);
+}
+
+.hide-video {
+  display: none;
+}
+
+.blocker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: " ";
+  background: rgb(0 0 0 / 62%);
+  z-index: 2500;
+}
+
+.openCard {
+  width: 100%;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .vid-container {
+    width: 80% !important;
+  }
+}
+
+.vid-container {
+  left: 50%;
+  top: 50%;
+  z-index: 3000;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  width: 50%;
+}
+
+.vid-container button {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pattern {
+  background-image:url("../Images/About.Egypt/pattern.webp");
+  background-color: var(--main-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-block: 0px;
+}
+
+
+.dest{
+  align-items: center !important;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden;
+}
+
+
+.sldr .h2{
+  
+  font-family: New Amsterdam;
+  font-weight: bolder;
+  font-weight: lighter;
+  font-size: 80px;
+  text-align: center;
+color: white;  
+
+}
